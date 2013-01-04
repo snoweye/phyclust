@@ -1,0 +1,30 @@
+\name{.se.model}
+\alias{.se.model}
+\docType{data}
+\title{Sequencing Error Model}
+\description{
+  An object stores sequencing error models.
+}
+\usage{.se.model}
+\format{
+  A character vector contains all possible sequencing models. 
+}
+\details{
+  Currently, only a \code{CONVOLUTION} model is implemented.
+}
+\references{
+  Phylogenetic Clustering Website:
+  \url{http://thirteen-01.stat.iastate.edu/snoweye/phyclust/}
+}
+\author{
+  Wei-Chen Chen \email{phyclust@gmail.com}
+}
+\seealso{
+  \code{\link{.show.option}}.
+}
+\examples{
+\dontrun{
+.se.model
+}
+}
+\keyword{datasets}

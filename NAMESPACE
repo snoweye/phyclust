@@ -1,0 +1,18 @@
+useDynLib(phyclust)
+
+exportPattern("^[[:alpha:]]+")
+# exportPattern("^[\\.]")
+
+export(
+.EMControl,
+.show.option
+)
+
+S3method(print, ms)
+S3method(print, phyclust)
+S3method(print, Pt)
+S3method(print, RRand)
+S3method(print, seq.data)
+S3method(print, seqgen)
+S3method(print, baseml)
+S3method(summary, phyclust)

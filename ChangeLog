@@ -1,0 +1,119 @@
+2013-01-04: Ver. 0.1-14
+  * add temp.file to ms().
+
+2012-12-23: Ver. 0.1-13
+  * fix .GlobalEnv problem.
+  * fix .Last.load problem.
+  * drop unvisible functions.
+
+2012-04-29: Ver. 0.1-12
+  * fix a bug in ms().
+  * fix more F0, stdout, putchar, ...etc in baseml() for CRAN.
+  * fix fprintf(stderr, ...) bugs everywhere replacing by REprintf(...).
+  * check demo examples and vignettes.
+  * add missing to C and R code.
+  * add an update function to phyclust.
+  * fix memory overwrite problems in sequencing error probability.
+
+2012-03-01: Ver. 0.1-11
+  * add sequencing error models in C and R, phyclust.se(), phyclust.se.update().
+  * fix stdout, stderr, fprintf, printf, puts, ...etc for CRAN.
+  * add PAML C function baseml to find tree using maximum likelihood.
+  * modify PAML functions for baseml and fix bugs.
+  * fix the fclose() problem in baseml.
+  * generate the R function paml.baseml() to call PAML baseml.
+  * generate utility functions such write.paml(), write.paml.format(), ... etc.
+  * rename some C functions of seq-gen borrowed from PAML with conflicts.
+  * fix the fclose() problem in seq-gen.
+
+2011-10-31: Ver. 0.1-10
+  * modify some warnings in C code due to the R CRAN's checking report.
+
+2011-10-24: Ver. 0.1-9
+  * modify for new release of R-2.14.x.
+
+2011-07-03: Ver. 0.1-9
+  * modify read.fasta.format().
+  * add some minor tools.
+
+2010-11-16: Ver. 0.1-9
+  * fix a bug in missing_flag.
+  * add .amino.acid, .codon, and .genetic.code, and translated functions.
+  * modified plotdots().
+  * Add a few arguments for reading, writing and translating unaligned
+    sequences.
+
+2010-09-15: Ver. 0.1-8
+  * semi-supervised clustering.
+  * remove any X_unique and replace by X.
+
+2010-04-26: Ver. 0.1-7
+  * fix a bug in the initialization NJ and randomNJ using neighbor-joining,
+  * modify the EM algorithm for missing data or gaps of sequences in C,
+  * add a C function for finding a consensus sequence,
+  * modify plotdots() based on the consensus sequence,
+  * add an R function plotclass() and plotstruct() for structure plots, and
+  * move the manuals of ms and seq-gen from the package to this website to
+    reduce the package size. 
+
+
+======================== Log Before Release ===================================
+2009-12-24:
+  * Add seq.gen() for SNP.
+  * Modified seq-gen.c allowing dynamical tree sizes with argument -u.  
+
+2009-11-08:
+  * Add logL, em.step, e.step, and m.step to R/.
+  * Adjust some fprintf() to printf().
+  * A bug which does not update count_Mu_X when Mu is updated, and it causes
+    the negative values of count_Mu_X and positive huge logL.
+  * Rewrite logL with scaled exponent to avoid overflow and underflow.
+
+2009-10-06:
+  * Add logPt and Q_matrix to R/.
+  * Add seq-gen.
+  * Add R's random number generation to seq-gen.
+  * Fix more bugs in ms including memory leaks and missed allocations.
+  * Fix more bugs in seq-gen including memory leaks and missed allocations.
+  * Add manualMu.
+  * Remove seq-gen's stdin.
+
+2009-10-03:
+  * Add ms.
+
+2009-10-01:
+  * Finish ECM, AECM methods.
+  * Fix a big bug in logpL and delete X_org_summarized.
+
+2009-09-23:
+  * Add function pointers to deal unique sequences.
+  * Add ECM, AECM methods.
+
+2009-09-12:
+  * Add count_Mu_X in empcs to speed up.
+  * Remove all NN.
+  * Add empirical version for F81 and HKY85.
+  * Add est_non_seg_site = FALSE to speed up.
+  * Add unique_seq_id to speed up.
+
+2009-09-01:
+  * Rewrite Q to QA in C and add EE, EV, VE, VV.
+  * Add SNP.
+  * Add F81 model.
+
+2009-08-21:
+  * Rebuild R code.
+
+2009-07-28:
+  * Rewrite in C.
+  * Rename to phyclust.
+
+2009-07-01:
+  * Add functions to output file in PHYLIP and FASTA format.
+
+2009-06-01:
+  * Update and add several functions.
+
+2009-03-09:
+  * Package initialized.
+

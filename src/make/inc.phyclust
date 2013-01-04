@@ -1,0 +1,32 @@
+# OBJECTS = $(SRCS_OBJS) $(PC_OBJS) $(MS_OBJS) $(SG_OBJS) $(PB_OBJS)
+PC_OBJS = \
+phyclust/phyclust_ape_nj.o \
+phyclust/phyclust_edist.o \
+phyclust/phyclust_em_control.o \
+phyclust/phyclust_em_fp.o \
+phyclust/phyclust_em_phyclust_struct.o \
+phyclust/phyclust_em_step.o \
+phyclust/phyclust_em_tool.o \
+phyclust/phyclust_file_input.o \
+phyclust/phyclust_init_method.o \
+phyclust/phyclust_init_method_ex.o \
+phyclust/phyclust_init_method_kmed.o \
+phyclust/phyclust_init_method_nj.o \
+phyclust/phyclust_init_method_pam.o \
+phyclust/phyclust_init_procedure.o \
+phyclust/phyclust_label.o \
+phyclust/phyclust_logpL.o \
+phyclust/phyclust_optim_nmmin.o \
+phyclust/phyclust_pam.o \
+phyclust/phyclust_qmatrix_array.o \
+phyclust/phyclust_qmatrix.o \
+phyclust/phyclust_se_convolution_em_step.o \
+phyclust/phyclust_se_convolution_em_tool.o \
+phyclust/phyclust_se_convolution_logpL.o \
+phyclust/phyclust_se_em_fp.o \
+phyclust/phyclust_se_em_phyclust_struct.o \
+phyclust/phyclust_se_em_tool.o \
+phyclust/phyclust_se_pmatrix.o \
+phyclust/phyclust_se_struct.o \
+phyclust/phyclust_struct.o \
+phyclust/phyclust_tool.o

@@ -1,0 +1,10 @@
+pony_524		phyclust	An example of great pony 524 dataset.
+em_step			phyclust	An example EM steps.
+ex_trees		phyclust	An example of trees.
+simu_ms			phyclust	An example of ms().
+simu_seqgen_anc		phyclust	An example of seqgen().
+simu_seqgen_anc_SNP	phyclust	An example of seqgen() for SNP.
+toy			phyclust	An example of toy dataset.
+toy_missing		phyclust	An example of toy dataset with missing.
+toy_paml_baseml	phyclust	An example of paml.baseml().
+tzeng2005		phyclust	An example of Crohn's disease dataset.

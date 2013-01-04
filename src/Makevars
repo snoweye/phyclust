@@ -1,0 +1,27 @@
+### Makefile suggested by Dr. Karin Dorman
+### Unportable version (GNU make only).
+# SRCS = $(wildcard *.c)
+# PC_SRCS = $(wildcard phyclust/*.c)
+# MS_SRCS = $(wildcard msdir/*.c)
+# SG_SRCS = $(wildcard seq-gen/*.c)
+# PB_SRCS = paml_baseml/R_paml_baseml_main.c paml_baseml/baseml.c \
+#           paml_baseml/tools.c
+# OBJECTS = $(SRCS:.c=.o) $(PC_SRCS:.c=.o) $(MS_SRCS:.c=.o) $(SG_SRCS:.c=.o) \
+#           $(PB_SRCS:.c=.o)
+
+PKG_CFLAGS = -D__HAVE_R_
+
+include make/inc.src
+include make/inc.phyclust
+include make/inc.msdir
+include make/inc.seq-gen
+include make/inc.paml_baseml
+OBJECTS = $(SRCS_OBJS) $(PC_OBJS) $(MS_OBJS) $(SG_OBJS) $(PB_OBJS)
+
+all: $(SHLIB)
+
+$(SHLIB): $(OBJECTS)
+
+clean:
+	@-rm -f $(OBJECTS) $(SHLIB)
+	@-rm -f *.o *.d *.rc Makedeps

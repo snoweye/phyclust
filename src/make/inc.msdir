@@ -1,0 +1,7 @@
+# OBJECTS = $(SRCS_OBJS) $(PC_OBJS) $(MS_OBJS) $(SG_OBJS) $(PB_OBJS)
+MS_OBJS = \
+msdir/ms.o \
+msdir/ms_main.o \
+msdir/R_ms_main.o \
+msdir/R_rand.o \
+msdir/streec.o

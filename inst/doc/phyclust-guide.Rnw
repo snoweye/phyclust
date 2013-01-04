@@ -1,0 +1,124 @@
+%\VignetteIndexEntry{phyclust-guide}
+
+\documentclass[article,shortnames,nojss]{phyclust-include/jss}
+
+
+\usepackage{verbatim}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+\newcommand{\A}{\mbox{A}}
+\newcommand{\C}{\mbox{C}}
+\newcommand{\G}{\mbox{G}}
+\newcommand{\T}{\mbox{T}}
+\definecolor{mygreen}{RGB}{0,150,0}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% declarations for jss.cls %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% almost as usual
+\author{Wei-Chen Chen\\
+%\\
+%\Large
+%Computer Science and Mathematics Division\\
+%\Large
+%Oak Ridge National Laboratory\\
+%\Large
+%Oak Ridge, TN, USA
+} %\\ \today}
+\title{A Quick Guide for the \pkg{phyclust} Package}
+%\\
+%\vspace{0.2cm} \large (Based on Version 0.1-2)}
+
+%% for pretty printing and a nice hypersummary also set:
+\Plainauthor{Wei-Chen Chen} %% comma-separated
+\Plaintitle{Quick Guide for phyclust} %% without formatting
+\Shorttitle{Quick Guide for phyclust} %% a short title (if necessary)
+
+%% an abstract and keywords
+%\Abstract{
+%  The \pkg{phyclust} package in \proglang{R} is for Phylogenetic Clustering
+%  a novel statistics method incorporating model-based clusterings with
+%  evolution theories to identify population
+%  structures and cluster DNA sequences. It's kernel is implemented
+%  in \proglang{C} with objective structures as a library for further
+%  standalone applications. It also integrates three famous tools
+%  \pkg{ms} \citep{Hudson2002} and \pkg{seq-gen} \citep{Rambaut1997}
+%  for generating coalescent trees and sequences,
+%  and \pkg{Hap-Clustering} \citep{Tzeng2005} for SNP haplotype grouping.
+%  It also provides functions for visualizing classifications of sequence data.
+%}
+%\Keywords{phyloclustering, model-based clustering, EM algorithm}
+%\Plainkeywords{phyloclustering, model-based clustering, EM algorithm} %% without formatting
+%% at least one keyword must be supplied
+
+%% publication information
+%% NOTE: Typically, this can be left commented and will be filled out by the technical editor
+%% \Volume{13}
+%% \Issue{9}
+%% \Month{September}
+%% \Year{2004}
+%% \Submitdate{2004-09-29}
+%% \Acceptdate{2004-09-29}
+
+%% The address of (at least) one author should be given
+%% in the following format:
+\Address{
+  Wei-Chen Chen\\
+  Computer Science and Mathematics Division\\ Oak Ridge National Laboratory\\
+  PO Box 2008 MS6367\\
+  Oak Ridge, TN 37831-6367, USA\\
+  E-mail: \email{wccsnow@gmail.com}\\
+  URL: \url{http://thirteen-01.stat.iastate.edu/snoweye/phyclust/}
+}
+%% It is also possible to add a telephone and fax number
+%% before the e-mail in the following format:
+%% Telephone: +43/1/31336-5053
+%% Fax: +43/1/31336-734
+
+%% for those who use Sweave please include the following line (with % symbols):
+%% need no \usepackage{Sweave.sty}
+
+%% end of declarations %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\pagenumbering{roman}
+\tableofcontents
+
+%% include your article here, just as usual
+%% Note that you should use the \pkg{}, \proglang{} and \code{} commands.
+
+\newpage
+\section*{Acknowledgement}
+\addcontentsline{toc}{section}{Acknowledgement \vspace{-0.3cm}}
+This work was done partly in Department of Statistics, Iowa State University,
+and in Computer Science and Mathematics Division, Oak Ridge National Laboratory,
+USA.
+The author thanks Drs. Karin S. Dorman and Ranjan Maitra in Iowa State
+University for helpful discussion, and was a research assistant on grant
+NSF CAREER DMS-0437555.
+The author also thanks Dr. George Ostrouchov in Oak Ridge National Laboratory
+for grant supports from U.S. DOE Office of Science.
+
+\newpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\input{./phyclust-include/01-introduction}
+\input{./phyclust-include/02-dataio}
+\input{./phyclust-include/03-msseqgen}
+\input{./phyclust-include/04-phyclust}
+\input{./phyclust-include/05-paml_baseml}
+\input{./phyclust-include/06-haplo}
+
+\newpage
+\phantomsection
+\addcontentsline{toc}{section}{References}
+\bibliography{./phyclust-include/phyclust}
+
+\end{document}

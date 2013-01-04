@@ -1,0 +1,16 @@
+# OBJECTS = $(SRCS_OBJS) $(PC_OBJS) $(MS_OBJS) $(SG_OBJS) $(PB_OBJS)
+SRCS_OBJS = \
+R_phyclust.o \
+R_phyclust_edist.o \
+R_phyclust_em_step.o \
+R_phyclust_find_consensus.o \
+R_phyclust_label.o \
+R_phyclust_logL.o \
+R_phyclust_logPt.o \
+R_phyclust_qmatrix.o \
+R_phyclust_se.o \
+R_phyclust_se_update.o \
+R_phyclust_struct.o \
+R_phyclust_update.o \
+RRand.o \
+R_RRand.o

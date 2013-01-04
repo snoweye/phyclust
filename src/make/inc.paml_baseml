@@ -1,0 +1,10 @@
+# PB_SRCS = paml_baseml/R_paml_baseml_main.c paml_baseml/baseml.c \
+#           paml_baseml/tools.c
+# OBJECTS = $(SRCS_OBJS) $(PC_OBJS) $(MS_OBJS) $(SG_OBJS) $(PB_OBJS)
+PB_OBJS = \
+paml_baseml/baseml.o \
+paml_baseml/R_paml_baseml_main.o \
+paml_baseml/tools.o
+
+# paml_baseml/treespace.o \
+# paml_baseml/treesub.o

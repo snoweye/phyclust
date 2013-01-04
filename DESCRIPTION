@@ -1,0 +1,31 @@
+Package: phyclust
+Version: 0.1-14
+Date: 2013-01-04
+Title: Phylogenetic Clustering (Phyloclustering)
+Authors@R: c(person("Wei-Chen", "Chen", role = c("aut", "cre"), email =
+        "wccsnow@gmail.com"), person("Karin", "Dorman", role =
+        "aut"))
+Depends: R (>= 2.14.0), ape
+LazyLoad: yes
+LazyData: yes
+SystemRequirements: GNU make
+Description: Phylogenetic clustering (phyloclustering) is an evolutionary
+        Continuous Time Markov Chain model-based approach to identify
+        population structure from molecular data without assuming
+        linkage equilibrium. The package phyclust (Chen 2011) provides a
+        convenient implementation of phyloclustering for DNA and SNP data,
+        capable of clustering individuals into subpopulations and identifying
+        molecular sequences representative of those subpopulations. It is
+        designed in C for performance, interfaced with R for visualization,
+        and incorporates other popular open source programs including
+        ms (Hudson 2002), seq-gen (Rambaut and Grassly 1997),
+        Hap-Clustering (Tzeng 2005) and PAML baseml (Yang 1997, 2007), for
+        simulating data, additional analyses, and searching the best tree.
+        See the phyclust website for more information, documentations and
+        examples.
+License: GPL (>= 2)
+URL: http://thirteen-01.stat.iastate.edu/snoweye/phyclust/
+Packaged: 2013-01-04 14:55:41 UTC; snoweye
+Author: Wei-Chen Chen [aut, cre],
+  Karin Dorman [aut]
+Maintainer: Wei-Chen Chen <wccsnow@gmail.com>

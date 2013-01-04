@@ -1,0 +1,13 @@
+# OBJECTS = $(SRCS_OBJS) $(PC_OBJS) $(MS_OBJS) $(SG_OBJS) $(PB_OBJS)
+SG_OBJS = \
+seq-gen/aamodels.o \
+seq-gen/eigen.o \
+seq-gen/evolve.o \
+seq-gen/gamma.o \
+seq-gen/global.o \
+seq-gen/model.o \
+seq-gen/nucmodels.o \
+seq-gen/R_seq-gen_main.o \
+seq-gen/seq-gen.o \
+seq-gen/treefile.o \
+seq-gen/twister.o
