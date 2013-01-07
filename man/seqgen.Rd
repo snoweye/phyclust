@@ -7,13 +7,15 @@
   developed by Rambaut, A. and Grassly, N.C. (1997).
 }
 \usage{
-seqgen(opts = NULL, rooted.tree = NULL, newick.tree = NULL, input = NULL)
+seqgen(opts = NULL, rooted.tree = NULL, newick.tree = NULL, input = NULL,
+       temp.file = NULL)
 }
 \arguments{
   \item{opts}{options as the standalone version.}
   \item{rooted.tree}{a rooted tree which sequences are generated according to.}
   \item{newick.tree}{a NEWICK tree which sequences are generated according to.}
   \item{input}{optional inputs of seq-gen, e.g. ancestral sequences.}
+  \item{temp.file}{temporary file for seqgen output.}
 }
 \details{
   This function directly reuses the C code of \code{seq-gen} by arguments
@@ -44,6 +46,12 @@ seqgen(opts = NULL, rooted.tree = NULL, newick.tree = NULL, input = NULL)
     \item \code{-t} is ts/tv ratio which is not equal to \eqn{\kappa}{kappa}.
     \item See more examples in \code{gen.seq.HKY} and \code{gen.seq.SNP}.
   }
+
+  \code{temp.file} allows users to specify seqgen output file themselves, but
+  this file will not be deleted nor converted into R after the call to
+  \code{seqgen}. Users should take care the readings. By default, \code{seqgen}
+  uses a system temp file to store the output which is converted into R
+  after the call and is deleted after converting.
 }
 \value{
   This function returns a vector, and each element stores one line of STDOUT

@@ -30,8 +30,9 @@ ms(nsam = NULL, nreps = 1, opts = NULL, temp.file = NULL)
   \code{read.tree} of \pkg{ape} and passed to \code{seqgen} to generate
   sequences. 
 
-  \code{temp.file} allows users to specify ms output file themselves and
-  will not be deleted after the call to \code{ms}. By default, \code{ms}
+  \code{temp.file} allows users to specify ms output file themselves, but
+  this file will not be deleted nor converted into R after the call to
+  \code{ms}. Users should take care the readings. By default, \code{ms}
   uses a system temp file to store the output which is converted into R
   after the call and is deleted after converting.
 }

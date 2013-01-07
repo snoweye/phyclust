@@ -1,5 +1,6 @@
-2013-01-04: Ver. 0.1-14
-  * add temp.file to ms().
+2013-01-07: Ver. 0.1-14
+  * add temp.file to ms() and seq.gen().
+  * replace scan() by readLines() in ms() and seq.gen().
 
 2012-12-23: Ver. 0.1-13
   * fix .GlobalEnv problem.

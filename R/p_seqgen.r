@@ -1,12 +1,17 @@
 ### This file contains functions for "seq-gen".
 
 seqgen <- function(opts = NULL, rooted.tree = NULL, newick.tree = NULL,
-    input = NULL){
+    input = NULL, temp.file = NULL){
   argv <- "seq-gen"
-  temp.file.seqgen <- tempfile("seqgen.")
-  temp.file.ms <- tempfile("ms.")
 
   if(! is.null(opts)){
+    if(is.null(temp.file)){
+      temp.file.seqgen <- tempfile("seqgen.")
+    } else{
+      temp.file.seqgen <- temp.file
+    }
+    temp.file.ms <- tempfile("ms.")
+
     if((! is.null(rooted.tree)) && (class(rooted.tree) == "phylo")){
       newick.tree <- write.tree(rooted.tree, digits = 12)
     }
@@ -24,20 +29,29 @@ seqgen <- function(opts = NULL, rooted.tree = NULL, newick.tree = NULL,
     argv <- c(argv, unlist(strsplit(opts, " ")), temp.file.ms)
     .Call("R_seq_gen_main", argv, temp.file.seqgen, PACKAGE = "phyclust")
 
-    ret <- scan(file = temp.file.seqgen,
-                what = "character", sep = "\n", quiet = TRUE)
-    class(ret) <- "seqgen"
-
-    unlink(temp.file.seqgen)
+    # ret <- scan(file = temp.file.seqgen,
+    #             what = "character", sep = "\n", quiet = TRUE)
+    # class(ret) <- "seqgen"
+    # unlink(temp.file.seqgen)
     unlink(temp.file.ms)
-    return(ret)
+
+    # return(ret)
+
+    if(is.null(temp.file)){
+      ret <- readLines(con = temp.file.seqgen, warn = FALSE)
+      ret <- ret[ret != ""]   # Drop the empty lines.
+      class(ret) <- "seqgen"
+      unlink(temp.file.seqgen)
+      return(ret)
+    }
+  } else{
+    temp.file.seqgen <- tempfile("seqgen.")
+    argv <- c(argv, "-h")
+    try(.Call("R_seq_gen_main", argv, temp.file.seqgen, PACKAGE = "phyclust"),
+        silent = TRUE)
+    unlink(temp.file.seqgen)
   }
 
-  argv <- c(argv, "-h")
-  try(.Call("R_seq_gen_main", argv, temp.file.ms, PACKAGE = "phyclust"),
-      silent = TRUE)
-  unlink(temp.file.seqgen)
-  unlink(temp.file.ms)
   invisible()
 } # End of seqgen().
 
