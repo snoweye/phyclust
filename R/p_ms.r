@@ -18,15 +18,15 @@ ms <- function(nsam = NULL, nreps = 1, opts = NULL, temp.file = NULL){
       #             what = "character", sep = "\n", quiet = TRUE)
       # class(ret) <- "ms"
       # unlink(temp.file.ms)
+      # return(ret)
 
       if(is.null(temp.file)){
         ret <- readLines(con = temp.file.ms, warn = FALSE)
         ret <- ret[ret != ""]   # Drop the empty lines.
         class(ret) <- "ms"
         unlink(temp.file.ms)
+        return(ret)
       }
-
-      return(ret)
     }
   } else{
     temp.file.ms <- tempfile("ms.")
