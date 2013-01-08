@@ -1,3 +1,5 @@
+library(phyclust, quiet = TRUE)
+
 X <- seq.data.toy$org
 
 ### Fit a EE, JC69 model using emEM

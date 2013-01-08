@@ -32,6 +32,8 @@
 }
 \examples{
 \dontrun{
+library(phyclust, quiet = TRUE)
+
 data.path <- paste(.libPaths()[1], "/phyclust/data/pony524.phy", sep = "")
 # edit(file = data.path)
 my.pony.524 <- read.phylip(data.path)

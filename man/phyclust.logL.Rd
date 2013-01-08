@@ -52,6 +52,8 @@ phyclust.logL(X, ret.phyclust = NULL, K = NULL, Eta = NULL,
 }
 \examples{
 \dontrun{
+library(phyclust, quiet = TRUE)
+
 EMC.1 <- .EMC
 EMC.1$EM.iter <- 1
 # the same as EMC.1 <- .EMControl(EM.iter = 1)

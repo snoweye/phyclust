@@ -1,3 +1,5 @@
+library(phyclust, quiet = TRUE)
+
 ### Examples to draw Neighbor-Joining trees.
 set.seed(1234)
 K <- 3                      # Number of clusters

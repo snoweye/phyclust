@@ -42,6 +42,8 @@ gen.equal.star.anc.dec(K, N.K, rate.f = 0.5)
 }
 \examples{
 \dontrun{
+library(phyclust, quiet = TRUE)
+
 set.seed(1234)
 tree.K <- gen.equal.star.anc.dec(6, rep(3:5, 2),
                                  rate.f = 0.7)

@@ -103,6 +103,8 @@ phyclust(X, K, EMC = .EMC, manual.id = NULL, label = NULL, byrow = TRUE)
 }
 \examples{
 \dontrun{
+library(phyclust, quiet = TRUE)
+
 X <- seq.data.toy$org
 
 set.seed(1234)

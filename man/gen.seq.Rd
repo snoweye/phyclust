@@ -46,6 +46,8 @@ gen.seq.SNP(rooted.tree, pi, L, rate.scale = 1, anc.seq = NULL)
 }
 \examples{
 \dontrun{
+library(phyclust, quiet = TRUE)
+
 # Generate a tree
 set.seed(1234)
 ret.ms <- ms(nsam = 5, nreps = 1, opts = "-T")

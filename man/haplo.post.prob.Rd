@@ -65,6 +65,8 @@
 }
 \examples{
 \dontrun{
+library(phyclust, quiet = TRUE)
+
 data.path <- paste(.libPaths()[1], "/phyclust/data/crohn.phy", sep = "")
 my.snp <- read.phylip(data.path, code.type = "SNP")
 ret <- haplo.post.prob(my.snp$org, ploidy = 1)

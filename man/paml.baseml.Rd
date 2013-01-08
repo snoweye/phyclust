@@ -112,6 +112,8 @@ paml.baseml.show.default()
 }
 \examples{
 \dontrun{
+library(phyclust, quiet = TRUE)
+
 paml.baseml.show.default()
 
 ### Generate data.

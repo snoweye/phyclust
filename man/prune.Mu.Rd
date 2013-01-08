@@ -35,6 +35,8 @@ prune.Mu(X, X.class, Mu, code.type = .code.type[1])
 }
 \examples{
 \dontrun{
+library(phyclust, quiet = TRUE)
+
 X <- seq.data.toy$org
 X[, 5] <- .nucleotide$nid[.nucleotide$code == "-"]
 ret <- phyclust(X, 2)

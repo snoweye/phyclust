@@ -51,6 +51,8 @@ as.star.tree(rooted.tree, keep.bifurcation = TRUE)
 }
 \examples{
 \dontrun{
+library(phyclust, quiet = TRUE)
+
 set.seed(1234)
 ret.ms <- ms(5, 1, opts = paste("-T", sep = " "))
 tree.ms <- read.tree(text = ret.ms[3])

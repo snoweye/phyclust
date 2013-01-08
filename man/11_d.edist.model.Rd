@@ -30,6 +30,8 @@
 }
 \examples{
 \dontrun{
+library(phyclust, quiet = TRUE)
+
 .edist.model
 }
 }

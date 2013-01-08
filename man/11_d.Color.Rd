@@ -21,6 +21,8 @@
 }
 \examples{
 \dontrun{
+library(phyclust, quiet = TRUE)
+
 .Color
 }
 }

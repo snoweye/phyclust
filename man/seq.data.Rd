@@ -44,6 +44,8 @@
 }
 \examples{
 \dontrun{
+library(phyclust, quiet = TRUE)
+
 seq.data.toy
 seq.data.gap
 

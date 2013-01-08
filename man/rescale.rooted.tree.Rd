@@ -36,6 +36,8 @@ rescale.rooted.tree(rooted.tree, scale.height = 1)
 }
 \examples{
 \dontrun{
+library(phyclust, quiet = TRUE)
+
 set.seed(1234)
 ret.ms <- ms(5, 1, opts = paste("-T", sep = " "))
 tree.ms <- read.tree(text = ret.ms[3])

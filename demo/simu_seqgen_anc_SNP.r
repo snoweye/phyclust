@@ -1,3 +1,5 @@
+library(phyclust, quiet = TRUE)
+
 ### Examples to apply ms() and seq.gen() for SNP data.
 set.seed(1234)
 N <- 1001                             # Number of sequences.

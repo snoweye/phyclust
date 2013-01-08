@@ -37,6 +37,8 @@ plotgaps(X, code.type = .code.type[1], main = "Gaps Plot",
 }
 \examples{
 \dontrun{
+library(phyclust, quiet = TRUE)
+
 # For nucleotide
 set.seed(1234)
 X <- seq.data.toy$org

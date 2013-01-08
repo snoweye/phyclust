@@ -39,6 +39,8 @@ nid2code(nidseq, lower.case = TRUE)
 }
 \examples{
 \dontrun{
+library(phyclust, quiet = TRUE)
+
 a <- c("A", "C", "G", "-", "T")
 code2nid(a)
 nid2code(code2nid(a)) 

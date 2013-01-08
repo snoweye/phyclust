@@ -34,6 +34,8 @@
 }
 \examples{
 \dontrun{
+library(phyclust, quiet = TRUE)
+
 .identifier
 }
 }

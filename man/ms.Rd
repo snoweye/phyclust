@@ -69,6 +69,8 @@ ms(nsam = NULL, nreps = 1, opts = NULL, temp.file = NULL)
 }
 \examples{
 \dontrun{
+library(phyclust, quiet = TRUE)
+
 ms()
 
 # an ancestral tree

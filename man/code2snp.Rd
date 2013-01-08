@@ -56,6 +56,8 @@ sid2nid(sidseq, half = TRUE)
 }
 \examples{
 \dontrun{
+library(phyclust, quiet = TRUE)
+
 # For codes
 a.vector <- c("A", "C", "G", "-", "T")
 code2snp(a.vector)

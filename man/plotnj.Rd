@@ -49,6 +49,8 @@ plotnj(unrooted.tree, X.class = NULL, type = "u", main = NULL,
 }
 \examples{
 \dontrun{
+library(phyclust, quiet = TRUE)
+
 set.seed(1234)
 ret.ms <- ms(nsam = 24, opts = "-T -G 0.5")
 tree.anc <- read.tree(text = ret.ms[3])

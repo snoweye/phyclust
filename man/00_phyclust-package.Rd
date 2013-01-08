@@ -110,6 +110,8 @@
 }
 \examples{
 \dontrun{
+library(phyclust, quiet = TRUE)
+
 demo(package = "phyclust")
 demo("ex_trees", package = "phyclust")
 }

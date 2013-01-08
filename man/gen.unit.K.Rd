@@ -58,6 +58,8 @@ gen.unit.K(K, N.K, rate.anc = 10, rate.dec = 10)
 }
 \examples{
 \dontrun{
+library(phyclust, quiet = TRUE)
+
 # For gen.unit.K()
 set.seed(1234)
 tree.K <- gen.unit.K(6, rep(3:5, 2),

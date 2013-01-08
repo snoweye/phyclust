@@ -79,6 +79,8 @@ write.paml.format(seqdata, filename, classid = NULL, seqname = NULL,
 }
 \examples{
 \dontrun{
+library(phyclust, quiet = TRUE)
+
 # PHYLIP
 data.path <- paste(.libPaths()[1], "/phyclust/data/crohn.phy", sep = "")
 my.snp <- read.phylip(data.path, code.type = "SNP")

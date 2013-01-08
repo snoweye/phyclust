@@ -52,6 +52,8 @@ phyclust.se.update(X, EMC = .EMC, ret.phyclust = NULL,
 }
 \examples{
 \dontrun{
+library(phyclust, quiet = TRUE)
+
 set.seed(1234)
 X <- seq.data.toy$org
 

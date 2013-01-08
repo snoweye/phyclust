@@ -37,6 +37,8 @@
 }
 \examples{
 \dontrun{
+library(phyclust, quiet = TRUE)
+
 .show.option()
 }
 }

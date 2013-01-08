@@ -57,6 +57,8 @@
 }
 \examples{
 \dontrun{
+library(phyclust, quiet = TRUE)
+
 .nucleotide
 .snp
 .codon

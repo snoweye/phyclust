@@ -44,6 +44,8 @@ plotstruct(Z, X.class = NULL, sort.inside.class = TRUE,
 }
 \examples{
 \dontrun{
+library(phyclust, quiet = TRUE)
+
 set.seed(1234)
 ret.1 <- phyclust(seq.data.toy$org, 3)
 plotstruct(ret.1$Z.normalized)

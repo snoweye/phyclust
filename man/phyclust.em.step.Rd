@@ -53,6 +53,8 @@ phyclust.em.step(X, ret.phyclust = NULL, K = NULL, Eta = NULL,
 }
 \examples{
 \dontrun{
+library(phyclust, quiet = TRUE)
+
 set.seed(1234)
 EMC.1 <- .EMC
 EMC.1$EM.iter <- 1

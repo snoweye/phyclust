@@ -49,6 +49,8 @@ plothist(X, X.class = NULL, Mu = NULL, fill.color = .Color,
 }
 \examples{
 \dontrun{
+library(phyclust, quiet = TRUE)
+
 X <- seq.data.toy$org
 plothist(X)
 

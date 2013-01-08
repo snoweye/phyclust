@@ -59,6 +59,8 @@
 }
 \examples{
 \dontrun{
+library(phyclust, quiet = TRUE)
+
 .init.method
 }
 }

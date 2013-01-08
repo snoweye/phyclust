@@ -38,6 +38,8 @@ sid2snp(sidseq)
 }
 \examples{
 \dontrun{
+library(phyclust, quiet = TRUE)
+
 a <- c("1", "2", "1", "-", "2")
 snp2sid(a)
 sid2snp(snp2sid(a)) 

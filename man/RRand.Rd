@@ -36,6 +36,8 @@ RRand(trcl, prcl, lab = NULL)
 }
 \examples{
 \dontrun{
+library(phyclust, quiet = TRUE)
+
 true.id <- c(1, 1, 1, 2, 2, 2, 3, 3, 3)
 pred.id <- c(2, 1, 2, 1, 1, 1, 2, 1, 1)
 label   <- c(0, 0, 0, 0, 1, 0, 2, 0, 0)

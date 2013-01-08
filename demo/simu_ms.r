@@ -1,3 +1,5 @@
+library(phyclust, quiet = TRUE)
+
 ### Examples to use ms().
 set.seed(1234)
 K <- 4                                # Number of clusters.

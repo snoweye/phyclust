@@ -55,6 +55,8 @@ acode2aid(acodeseq)
 }
 \examples{
 \dontrun{
+library(phyclust, quiet = TRUE)
+
 ### Test S3 methods by a vector
 a.vector <- c("A", "C", "G", "-", "T", "A")
 code2nid(a.vector)

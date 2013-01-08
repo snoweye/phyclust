@@ -41,6 +41,8 @@
 }
 \examples{
 \dontrun{
+library(phyclust, quiet = TRUE)
+
 .boundary.method
 }
 }

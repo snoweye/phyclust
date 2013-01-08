@@ -31,6 +31,8 @@
 }
 \examples{
 \dontrun{
+library(phyclust, quiet = TRUE)
+
 .EMC
 }
 }

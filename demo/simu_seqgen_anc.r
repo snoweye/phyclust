@@ -1,3 +1,5 @@
+library(phyclust, quiet = TRUE)
+
 ### Examples to apply ms() and seqgen() for nucleotide data.
 set.seed(1234)
 K <- 4                                # Number of clusters.

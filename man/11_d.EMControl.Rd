@@ -127,6 +127,8 @@
 }
 \examples{
 \dontrun{
+library(phyclust, quiet = TRUE)
+
 # The same as .EMC
 .EMControl()
 

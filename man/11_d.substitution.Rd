@@ -65,6 +65,8 @@
 }
 \examples{
 \dontrun{
+library(phyclust, quiet = TRUE)
+
 .substitution.model
 }
 }

@@ -39,6 +39,8 @@ gen.star.tree(N, total.height = 1)
 }
 \examples{
 \dontrun{
+library(phyclust, quiet = TRUE)
+
 ret.star <- gen.star.tree(5)
 plot(ret.star, type = "u")
 }

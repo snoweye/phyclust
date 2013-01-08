@@ -1,3 +1,5 @@
+library(phyclust, quiet = TRUE)
+
 X <- seq.data.toy$org
 X.class <- as.numeric(gsub(".*-(.)", "\\1", seq.data.toy$seqname))
 

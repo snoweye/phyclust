@@ -57,6 +57,8 @@
 }
 \examples{
 \dontrun{
+library(phyclust, quiet = TRUE)
+
 # Functions applied by directly type the names of objects.
 }
 }

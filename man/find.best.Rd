@@ -67,6 +67,8 @@ find.best(X, K, EMC = .EMC, manual.id = NULL, byrow = TRUE,
 }
 \examples{
 \dontrun{
+library(phyclust, quiet = TRUE)
+
 set.seed(1234)
 EMC.1 <- .EMControl(exhaust.iter = 1, short.iter = 5, EM.iter = 5)
 (ret.1 <- find.best(seq.data.toy$org, 2, EMC = EMC.1))

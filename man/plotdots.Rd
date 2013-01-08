@@ -60,6 +60,8 @@ plotdots(X, X.class = NULL, Mu = NULL, code.type = .code.type[1],
 }
 \examples{
 \dontrun{
+library(phyclust, quiet = TRUE)
+
 # For nucleotide
 X <- seq.data.toy$org
 par(mfrow = c(2, 2))

@@ -24,6 +24,8 @@
 }
 \examples{
 \dontrun{
+library(phyclust, quiet = TRUE)
+
 .se.model
 }
 }

@@ -1,3 +1,5 @@
+library(phyclust, quiet = TRUE)
+
 ### Read data set of Crohn's disease (Hugot et al. 2001, table 2).
 data.path <- tools:::file_path_as_absolute(
                system.file("./data/crohn.phy", package = "phyclust"))

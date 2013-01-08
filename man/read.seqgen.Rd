@@ -35,6 +35,8 @@ read.seqgen(text, byrow = TRUE, code.type = .code.type[1])
 }
 \examples{
 \dontrun{
+library(phyclust, quiet = TRUE)
+
 set.seed(123)
 ret.ms <- ms(nsam = 5, nreps = 1, opts = "-T")
 ret.seqgen <- seqgen(opts = "-mHKY -l40 -s0.2", newick.tree = ret.ms[3])

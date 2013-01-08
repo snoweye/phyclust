@@ -34,6 +34,8 @@ find.consensus(X, code.type = .code.type[1], with.gap = FALSE)
 }
 \examples{
 \dontrun{
+library(phyclust, quiet = TRUE)
+
 find.consensus(seq.data.toy$org)
 }
 }

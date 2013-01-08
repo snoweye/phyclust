@@ -54,6 +54,8 @@ phyclust.Pt(Q, Tt, substitution.model = .substitution.model$model[1])
 }
 \examples{
 \dontrun{
+library(phyclust, quiet = TRUE)
+
 Tt <- 0.5
 
 Q <- list(pi = c(0.25, 0.25, 0.25, 0.25), kappa = 0.5)

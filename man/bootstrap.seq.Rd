@@ -37,6 +37,8 @@ bootstrap.seq(ret.phyclust, star.trees)
 }
 \examples{
 \dontrun{
+library(phyclust, quiet = TRUE)
+
 set.seed(1234)
 EMC.1 <- .EMC
 EMC.1$EM.iter <- 1

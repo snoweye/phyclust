@@ -48,6 +48,8 @@
 }
 \examples{
 \dontrun{
+library(phyclust, quiet = TRUE)
+
 .em.method
 }
 }

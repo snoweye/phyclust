@@ -1,3 +1,5 @@
+library(phyclust, quiet = TRUE)
+
 ### Examples to use EM functions.
 data.path <- paste(.libPaths()[1], "/phyclust/data/pony524.phy", sep = "")
 my.seq <- read.phylip(data.path)
