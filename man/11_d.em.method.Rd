@@ -38,7 +38,7 @@
   \emph{Journal of the Royal Statistical Society Series B}, \bold{59}, 511-567.
 }
 \author{
-  Wei-Chen Chen \email{phyclust@gmail.com}
+  Wei-Chen Chen \email{wccsnow@gmail.com}
 }
 \seealso{
   \code{\link{.show.option}},

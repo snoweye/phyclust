@@ -104,7 +104,7 @@ paml.baseml.show.default()
 \author{
   Yang, Z. (1997) and Yang, Z. (2007)
 
-  Maintain: Wei-Chen Chen \email{phyclust@gmail.com}
+  Maintain: Wei-Chen Chen \email{wccsnow@gmail.com}
 }
 \seealso{
   \code{\link{print.baseml}},

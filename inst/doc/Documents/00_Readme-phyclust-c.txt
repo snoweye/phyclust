@@ -2,7 +2,7 @@ Library: phyclust-c
 Version: 0.1-5
 Date: 2012-04-21
 Author: Wei-Chen Chen and Karin S. Dorman
-Maintainer: Wei-Chen Chen <phyclust@gmail.com>
+Maintainer: Wei-Chen Chen <wccsnow@gmail.com>
 Description: Model Based Phylogenetic Clustering
 License: GPL (>= 2)
 URL: http://thirteen-01.stat.iastate.edu/snoweye/phyclust/

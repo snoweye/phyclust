@@ -76,7 +76,7 @@ seqgen(opts = NULL, rooted.tree = NULL, newick.tree = NULL, input = NULL,
 \author{
   Rambaut, A. and Grassly, N.C. (1997).
 
-  Maintain: Wei-Chen Chen \email{phyclust@gmail.com}
+  Maintain: Wei-Chen Chen \email{wccsnow@gmail.com}
 }
 \seealso{
   \code{\link{print.seqgen}},

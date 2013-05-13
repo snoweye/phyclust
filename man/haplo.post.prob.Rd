@@ -58,7 +58,7 @@
 \author{
   Jung-Ying Tzeng.
 
-  Maintain: Wei-Chen Chen \email{phyclust@gmail.com}
+  Maintain: Wei-Chen Chen \email{wccsnow@gmail.com}
 }
 \seealso{
   \code{\link{getcut.fun}}.

@@ -38,7 +38,7 @@ gen.seq.SNP(rooted.tree, pi, L, rate.scale = 1, anc.seq = NULL)
   \url{http://thirteen-01.stat.iastate.edu/snoweye/phyclust/}
 }
 \author{
-  Wei-Chen Chen \email{phyclust@gmail.com}
+  Wei-Chen Chen \email{wccsnow@gmail.com}
 }
 \seealso{
   \code{\link{gen.star.tree}},

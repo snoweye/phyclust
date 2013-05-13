@@ -50,7 +50,7 @@
   \bold{6:1}, 114-157.
 }
 \author{
-  Wei-Chen Chen \email{phyclust@gmail.com}
+  Wei-Chen Chen \email{wccsnow@gmail.com}
 }
 \seealso{
   \code{\link{.show.option}},

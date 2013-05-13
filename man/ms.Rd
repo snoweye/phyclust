@@ -59,7 +59,7 @@ ms(nsam = NULL, nreps = 1, opts = NULL, temp.file = NULL)
 \author{
   Hudson, R.R. (2002).
 
-  Maintain: Wei-Chen Chen \email{phyclust@gmail.com}
+  Maintain: Wei-Chen Chen \email{wccsnow@gmail.com}
 }
 \seealso{
   \code{\link{print.ms}},

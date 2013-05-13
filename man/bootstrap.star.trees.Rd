@@ -31,7 +31,7 @@ bootstrap.star.trees(ret.phyclust, min.n.class = 1)
   \url{http://thirteen-01.stat.iastate.edu/snoweye/phyclust/}
 }
 \author{
-  Wei-Chen Chen \email{phyclust@gmail.com}
+  Wei-Chen Chen \email{wccsnow@gmail.com}
 }
 \seealso{
   \code{\link{phyclust}},

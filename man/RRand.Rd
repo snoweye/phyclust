@@ -32,7 +32,7 @@ RRand(trcl, prcl, lab = NULL)
 \author{
   Ranjan Maitra.
 
-  Maintain: Wei-Chen Chen \email{phyclust@gmail.com}
+  Maintain: Wei-Chen Chen \email{wccsnow@gmail.com}
 }
 \examples{
 \dontrun{

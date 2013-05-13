@@ -27,7 +27,7 @@ find.consensus(X, code.type = .code.type[1], with.gap = FALSE)
   \url{http://thirteen-01.stat.iastate.edu/snoweye/phyclust/}
 }
 \author{
-  Wei-Chen Chen \email{phyclust@gmail.com}
+  Wei-Chen Chen \email{wccsnow@gmail.com}
 }
 \seealso{
   \code{\link{plotdots}}.

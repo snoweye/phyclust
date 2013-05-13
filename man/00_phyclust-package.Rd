@@ -100,7 +100,7 @@
   \url{http://ape.mpl.ird.fr/}
 }
 \author{
-  Wei-Chen Chen \email{phyclust@gmail.com}
+  Wei-Chen Chen \email{wccsnow@gmail.com}
 }
 \seealso{
   \code{\link{phyclust}},

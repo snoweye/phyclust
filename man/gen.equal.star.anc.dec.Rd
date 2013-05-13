@@ -35,7 +35,7 @@ gen.equal.star.anc.dec(K, N.K, rate.f = 0.5)
   \url{http://thirteen-01.stat.iastate.edu/snoweye/phyclust/}
 }
 \author{
-  Wei-Chen Chen \email{phyclust@gmail.com}
+  Wei-Chen Chen \email{wccsnow@gmail.com}
 }
 \seealso{
   \code{\link{gen.unit.K}}.

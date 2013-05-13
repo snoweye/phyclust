@@ -63,7 +63,7 @@
 \author{
   Jung-Ying Tzeng
 
-  Maintain: Wei-Chen Chen \email{phyclust@gmail.com}
+  Maintain: Wei-Chen Chen \email{wccsnow@gmail.com}
 }
 \keyword{internal}
 \keyword{Haploclust}

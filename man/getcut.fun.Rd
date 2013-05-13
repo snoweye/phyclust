@@ -42,7 +42,7 @@ getcut.fun(pp.org, nn, plot = 0)
 \author{
   Jung-Ying Tzeng.
 
-  Maintain: Wei-Chen Chen \email{phyclust@gmail.com}
+  Maintain: Wei-Chen Chen \email{wccsnow@gmail.com}
 }
 \seealso{
   \code{\link{haplo.post.prob}}.

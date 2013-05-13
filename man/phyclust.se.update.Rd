@@ -42,7 +42,7 @@ phyclust.se.update(X, EMC = .EMC, ret.phyclust = NULL,
   \url{http://thirteen-01.stat.iastate.edu/snoweye/phyclust/}
 }
 \author{
-  Wei-Chen Chen \email{phyclust@gmail.com}
+  Wei-Chen Chen \email{wccsnow@gmail.com}
 }
 \seealso{
   \code{\link{phyclust.se}},

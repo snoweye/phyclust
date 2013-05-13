@@ -49,7 +49,7 @@
   \emph{Pattern Recognition}, 3rd ed., pp. 635.
 }
 \author{
-  Wei-Chen Chen \email{phyclust@gmail.com}
+  Wei-Chen Chen \email{wccsnow@gmail.com}
 }
 \seealso{
   \code{\link{.show.option}},
