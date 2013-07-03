@@ -1,6 +1,6 @@
 Package: phyclust
 Version: 0.1-15
-Date: 2013-05-13
+Date: 2013-07-03
 Title: Phylogenetic Clustering (Phyloclustering)
 Authors@R: c(person("Wei-Chen", "Chen", role = c("aut", "cre"), email =
         "wccsnow@gmail.com"), person("Karin", "Dorman", role =
@@ -9,6 +9,8 @@ Depends: R (>= 2.14.0), ape
 LazyLoad: yes
 LazyData: yes
 SystemRequirements: GNU make
+Copyright: See phyclust/inst/Documents/ for files in src/msdir/,
+        src/seq-gen/, src/paml_baseml, and R/ttzeng-*.r.
 Description: Phylogenetic clustering (phyloclustering) is an evolutionary
         Continuous Time Markov Chain model-based approach to identify
         population structure from molecular data without assuming
@@ -25,7 +27,7 @@ Description: Phylogenetic clustering (phyloclustering) is an evolutionary
         examples.
 License: GPL (>= 2)
 URL: http://thirteen-01.stat.iastate.edu/snoweye/phyclust/
-Packaged: 2013-07-02 17:02:10 UTC; snoweye
+Packaged: 2013-07-03 16:43:24 UTC; snoweye
 Author: Wei-Chen Chen [aut, cre],
   Karin Dorman [aut]
 Maintainer: Wei-Chen Chen <wccsnow@gmail.com>
