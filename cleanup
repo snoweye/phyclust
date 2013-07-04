@@ -14,5 +14,3 @@ rm -rf ./src/msdir/*.o
 rm -rf ./src/paml_baseml/*.o
 rm -rf ./src/phyclust/*.o
 rm -rf ./src/seq-gen/*.o
-
-rm -rf ./inst/doc/
