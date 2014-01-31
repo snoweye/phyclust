@@ -1,3 +1,6 @@
+2014-01-31: Ver. 0.1-16
+  * Add opts = -u to seqgen() man page.
+
 2013-12-14: Ver. 0.1-15
   * Move vignettes.
 

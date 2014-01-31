@@ -3,7 +3,7 @@
 \alias{Class ms}
 \title{Generating Samples under a Wright-Fisher Neutral Model of Genetic Variation}
 \description{
-  This function modifies the original standalone code of \code{ms} developed by
+  This function modifies the original standalone code of \code{ms()} developed by
   Hudson (2002) for generating samples/coalescent trees under a Wright-Fisher
   neutral model.
 }
@@ -21,29 +21,29 @@ ms(nsam = NULL, nreps = 1, opts = NULL, temp.file = NULL)
   as input from the STDIN. The options \code{opts} is followed from the
   original \code{ms} except \code{nsam} and \code{nreps}.
 
-  For examples, options commonly used in \code{phyclust} are:
+  For examples, options commonly used in \pkg{phyclust} are:
   \itemize{
     \item "-T": generate trees in a neutral model.
     \item "-G": generate trees with a population growth rate, e.g. "-G 0.5".
   }
   These will return trees in a NEWICK format which can be read by the
-  \code{read.tree} of \pkg{ape} and passed to \code{seqgen} to generate
+  \code{read.tree()} of \pkg{ape} and passed to \code{seqgen()} to generate
   sequences. 
 
   \code{temp.file} allows users to specify ms output file themselves, but
   this file will not be deleted nor converted into R after the call to
-  \code{ms}. Users should take care the readings. By default, \code{ms}
+  \code{ms()}. Users should take care the readings. By default, \code{ms()}
   uses a system temp file to store the output which is converted into R
   after the call and is deleted after converting.
 }
 \value{
   This function returns a vector, and each element stores one line of STDOUT
-  of \code{ms} separated by newline. The vector stores in a class \code{ms}.
+  of \code{ms()} separated by newline. The vector stores in a class \code{ms}.
   The details of output format can found on the website
   \url{http://home.uchicago.edu/~rhudson1/source.html} and its manual.
 }
 \section{Warning(s)}{
-  Carefully read the \code{ms}'s original document before using the \code{ms}
+  Carefully read the \code{ms}'s original document before using the \code{ms()}
   function.
 }
 \references{
@@ -62,10 +62,10 @@ ms(nsam = NULL, nreps = 1, opts = NULL, temp.file = NULL)
   Maintain: Wei-Chen Chen \email{wccsnow@gmail.com}
 }
 \seealso{
-  \code{\link{print.ms}},
-  \code{\link[ape]{read.tree}},
-  \code{\link[ape]{bind.tree}},
-  \code{\link{seqgen}}.
+  \code{\link{print.ms}()},
+  \code{\link[ape]{read.tree}()},
+  \code{\link[ape]{bind.tree}()},
+  \code{\link{seqgen}()}.
 }
 \examples{
 \dontrun{

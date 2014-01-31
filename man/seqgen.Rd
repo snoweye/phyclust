@@ -25,7 +25,7 @@ seqgen(opts = NULL, rooted.tree = NULL, newick.tree = NULL, input = NULL,
   Input either a \code{rooted.tree} or a \code{newick.tree}, and
   \code{rooted.tree} should have a \code{Class phylo}.
 
-  For examples, options commonly used in \code{phyclust} are:
+  For examples, options commonly used in \pkg{phyclust} are:
   \itemize{
     \item "-m": set an evolution model, e.g. "-mHKY".
     \item "-t": set transition/transversion ratio, e.g. "-t0.7".
@@ -35,8 +35,12 @@ seqgen(opts = NULL, rooted.tree = NULL, newick.tree = NULL, input = NULL,
     \item "-k": index of ancestral sequence in input file, see \code{gen.seq.HKY}.
   }
   These will return sequences in \code{Format phylip} which can be
-  read by \code{read.seqgen} and transfered into an object with
+  read by \code{read.seqgen()} and transfered into an object with
   \code{Class seq.data}.
+
+  The maximum number of tips is 2000 in \code{seqgen()} by default, but an
+  extra option \code{opts = "-u 2014 ..."} can be simply increase the size
+  to 2014.
 
   \strong{Note}:
   \itemize{
@@ -44,12 +48,13 @@ seqgen(opts = NULL, rooted.tree = NULL, newick.tree = NULL, input = NULL,
           submitted at the same time.
     \item \code{seq-gen} use the order A, C, G, T.
     \item \code{-t} is ts/tv ratio which is not equal to \eqn{\kappa}{kappa}.
-    \item See more examples in \code{gen.seq.HKY} and \code{gen.seq.SNP}.
+    \item See more examples in \code{gen.seq.HKY()} and \code{gen.seq.SNP()}.
   }
 
   \code{temp.file} allows users to specify seqgen output file themselves, but
   this file will not be deleted nor converted into R after the call to
-  \code{seqgen}. Users should take care the readings. By default, \code{seqgen}
+  \code{seqgen()}. Users should take care the readings. By default,
+  \code{seqgen()}
   uses a system temp file to store the output which is converted into R
   after the call and is deleted after converting.
 }
@@ -61,7 +66,7 @@ seqgen(opts = NULL, rooted.tree = NULL, newick.tree = NULL, input = NULL,
 }
 \section{Warning(s)}{
   Carefully read the \code{seq-gen}'s original document before using the
-  \code{seqgen} function.
+  \code{seqgen()} function.
 }
 \references{
   Phylogenetic Clustering Website:
@@ -79,11 +84,11 @@ seqgen(opts = NULL, rooted.tree = NULL, newick.tree = NULL, input = NULL,
   Maintain: Wei-Chen Chen \email{wccsnow@gmail.com}
 }
 \seealso{
-  \code{\link{print.seqgen}},
-  \code{\link[ape]{read.tree}},
-  \code{\link{ms}},
-  \code{\link{gen.seq.HKY}},
-  \code{\link{gen.seq.SNP}}.
+  \code{\link{print.seqgen}()},
+  \code{\link[ape]{read.tree}()},
+  \code{\link{ms}()},
+  \code{\link{gen.seq.HKY}()},
+  \code{\link{gen.seq.SNP}()}.
 }
 \examples{
 \dontrun{
