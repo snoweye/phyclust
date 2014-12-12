@@ -26,7 +26,7 @@ Description: Phylogenetic clustering (phyloclustering) is an evolutionary
         examples.
 License: GPL (>= 2)
 URL: http://thirteen-01.stat.iastate.edu/snoweye/phyclust/
-Packaged: 2014-10-04 04:13:41 UTC; snoweye
+Packaged: 2014-12-12 02:08:52 UTC; snoweye
 Author: Wei-Chen Chen [aut, cre],
   Karin Dorman [aut]
 Maintainer: Wei-Chen Chen <wccsnow@gmail.com>

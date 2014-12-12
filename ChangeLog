@@ -1,3 +1,7 @@
+2014-12-11: Ver. 0.1-16
+  * Fix R_phyclust_e_step to manually copy Z_modifiled to Z_normalized for
+    storing back to R.
+
 2014-10-03: Ver. 0.1-16
   * Fix inst/doc/*.html to fit HTML5.
   * Get rid of jss.*

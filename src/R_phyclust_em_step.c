@@ -156,7 +156,7 @@ SEXP R_phyclust_e_step(SEXP R_N_X_org, SEXP R_L, SEXP R_X, SEXP R_K,
 	SEXP ret_Z_normalized;
 
 	/* Declare variables for processing. */
-	int i, *tmp_ptr;
+	int i, k, *tmp_ptr;
 	double *tmp_ptr_double;
 
 	/* Set initial values. */
@@ -217,6 +217,13 @@ SEXP R_phyclust_e_step(SEXP R_N_X_org, SEXP R_L, SEXP R_X, SEXP R_K,
 		E_step_simple(empcs, QA, EMFP);
 	} else{
 		EMFP->Update_Z_modified(empcs, QA);
+		/* Manually make a fake copy since Z_modified does not copy
+		   back to R. Only Z_normalized did. */
+		for(i = 0; i < empcs->N_X; i++){
+			for(k = 0; k < empcs->K; k++){
+				empcs->Z_normalized[i][k] = empcs->Z_modified[i][k];
+			}
+		}
 	}
 	EMFP->Copy_empcs_to_pcs(empcs, pcs);
 
