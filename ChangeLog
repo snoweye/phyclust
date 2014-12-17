@@ -1,3 +1,6 @@
+2014-12-16: Ver. 0.1-16
+  * Fix *total_sum potential overflow problem.
+
 2014-12-11: Ver. 0.1-16
   * Fix R_phyclust_e_step to manually copy Z_modifiled to Z_normalized for
     storing back to R.
