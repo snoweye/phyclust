@@ -16,13 +16,13 @@
    = pi_k * L_k(X_n) / sum_i(pi_i * L_i(X_n))
    = 1 / sum_i(pi_i * L_i(X_n) / (pi_k * L_k))
    = 1 / sum_i(exp(log(pi_i) + log(L_i(X_n)) - log(pi_k) - log(L_k(X_n))))
-   This function return stable exponential values with a scale exponeitial value and flag.
-   If flag = 1, scale_exp will be used to adjuste results eveywhere. Otherwise scale_exp = 0.
+   This function return stable exponential values with a scale exponential value and flag.
+   If flag = 1, scale_exp will be used to adjust results everywhere. Otherwise scale_exp = 0.
    *total_sum is for logL_observed.
 */
 void e_step_with_stable_exp(int *K, double *a_Z_normalized, double *total_sum, double *scale_exp, int *flag_out_range){
 	int k;
-	double tmp_exp, max_exp;
+	double tmp_exp, max_exp, tmp_exp_K, K_double;
 
 	*total_sum = 0.0;
 	*scale_exp = 0.0;
@@ -54,13 +54,16 @@ void e_step_with_stable_exp(int *K, double *a_Z_normalized, double *total_sum, d
 	}
 */
 	tmp_exp = exp(max_exp);
-	if(tmp_exp == HUGE_VAL || tmp_exp == 0.0){
+	K_double = (double) *K;
+	tmp_exp_K = tmp_exp * K_double;	/* Worst case of *total_sum. */
+	if(tmp_exp == HUGE_VAL || tmp_exp == 0.0 || tmp_exp_K == HUGE_VAL){
 		*flag_out_range = 1;
 		*scale_exp = (tmp_exp == HUGE_VAL) ? max_exp : -max_exp;
 		do{
 			*scale_exp *= 0.5;
 			tmp_exp = exp(*scale_exp);
-		} while(tmp_exp == HUGE_VAL);
+			tmp_exp_K = tmp_exp * K_double;
+		} while(tmp_exp == HUGE_VAL || tmp_exp_K == HUGE_VAL);
 		*scale_exp = max_exp - *scale_exp;
 		/* The *scale_exp is always greater than 0.
 		 * If max_exp > 0 and too large, then shift all to left and computable.
