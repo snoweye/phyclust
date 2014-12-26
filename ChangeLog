@@ -1,3 +1,6 @@
+2014-12-26: Ver. 0.1-16
+  * Fix phyclust_qmatrix_array.c line 102 and 125.
+
 2014-12-16: Ver. 0.1-16
   * Fix *total_sum potential overflow problem.
 

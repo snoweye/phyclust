@@ -99,7 +99,7 @@ Q_matrix_array* initialize_Q_matrix_array(int code_type, int K, int substitution
 				QA->Q[k]->kappa = allocate_double_1D(1);
 				QA->Q[k]->check_param = allocate_int_1D(1);
 				for(i = 0; i < QA->ncode; i++){
-					QA->Q[0]->pi[i] = 1 / (double) QA->ncode;
+					QA->Q[k]->pi[i] = 1 / (double) QA->ncode;
 				}
 				*QA->Q[k]->kappa = 1.0;
 				*QA->Q[k]->check_param = 1;
@@ -122,7 +122,7 @@ Q_matrix_array* initialize_Q_matrix_array(int code_type, int K, int substitution
 				QA->Q[k]->Tt = allocate_double_1D(1);
 				QA->Q[k]->check_param = allocate_int_1D(1);
 				for(i = 0; i < QA->ncode; i++){
-					QA->Q[0]->pi[i] = 1 / (double) QA->ncode;
+					QA->Q[k]->pi[i] = 1 / (double) QA->ncode;
 				}
 				*QA->Q[k]->kappa = 1.0;
 				*QA->Q[k]->Tt = 1.0;
