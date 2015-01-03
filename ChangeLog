@@ -1,3 +1,6 @@
+2015-01-02: Ver. 0.1-16
+  * Fix Update_Eta_given_Z_ADJUST renormalizing problems.
+
 2014-12-26: Ver. 0.1-16
   * Fix phyclust_qmatrix_array.c line 102 and 125.
 

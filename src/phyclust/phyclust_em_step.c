@@ -302,8 +302,8 @@ int M_step_ACM(em_phyclust_struct *empcs, Q_matrix_array *QA, Q_matrix_array *QA
 
 
 int Update_Eta_given_Z_ADJUST(em_phyclust_struct *empcs, em_control *EMC){
-	int n_X, k;
-	double total_sum = 0.0;
+	int n_X, k, check_Eta[empcs->K], flag_out_range = 0;
+	double total_sum = 0.0, tmp_sum_in_range = 0.0, tmp_sum_out_range = 0.0;
 
 	for(k = 0; k < empcs->K; k++){
 		empcs->Eta[k] = 0.0;
@@ -316,16 +316,39 @@ int Update_Eta_given_Z_ADJUST(em_phyclust_struct *empcs, em_control *EMC){
 		}
 		total_sum += empcs->Eta[k];
 	}
+
 	for(k = 0; k < empcs->K; k++){
 		empcs->Eta[k] /= total_sum;
-		empcs->log_Eta[k] = log(empcs->Eta[k]);
-	}
-	for(k = 0; k < empcs->K; k++){
+
+		/* Double check if out range occurs and set to boundary if any. */
 		if(empcs->Eta[k] < EMC->Eta_lower_bound){
 			empcs->Eta[k] = EMC->Eta_lower_bound;
+			tmp_sum_out_range += empcs->Eta[k];
+			check_Eta[k] = 1;
+			flag_out_range |= 1;
 		} else if(empcs->Eta[k] > EMC->Eta_upper_bound){
 			empcs->Eta[k] = EMC->Eta_upper_bound;
+			tmp_sum_out_range += empcs->Eta[k];
+			check_Eta[k] = 1;
+			flag_out_range |= 1;
+		} else{
+			tmp_sum_in_range += empcs->Eta[k];
+			check_Eta[k] = 0;
 		}
+	}
+
+	/* Normalize in range part to constrained total if out range occurs. */
+	if(flag_out_range == 1){
+		for(k = 0; k < empcs->K; k++){
+			if(check_Eta[k] == 0){
+				empcs->Eta[k] *= (1.0 - tmp_sum_out_range) / tmp_sum_in_range;
+			}
+		}
+	}
+
+	/* Update log_Eta before return. */
+	for(k = 0; k < empcs->K; k++){
+		empcs->log_Eta[k] = log(empcs->Eta[k]);
 	}
 
 	#if (EMDEBUG & 4) == 4
