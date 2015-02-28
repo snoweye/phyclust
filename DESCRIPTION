@@ -24,6 +24,7 @@ Description: Phylogenetic clustering (phyloclustering) is an evolutionary
         simulating data, additional analyses, and searching the best tree.
         See the phyclust website for more information, documentations and
         examples.
+RugReports: https://github.com/snoweye/phyclust/issues
 License: GPL (>= 2)
 URL: http://thirteen-01.stat.iastate.edu/snoweye/phyclust/
 Packaged: 2014-12-12 02:08:52 UTC; snoweye
