@@ -108,7 +108,7 @@ SEXP initialize_emptr(EMPTR emptr, phyclust_struct *pcs){
 		PROTECT(check_param = allocVector(INTSXP, 1));
 	PROTECT(label_method = allocVector(INTSXP, 1));
 
-	/* Set the elments and names. */
+	/* Set the elements and names. */
 	i = 0;
 	SET_VECTOR_ELT(emobj, i++, N_X_org);
 	SET_VECTOR_ELT(emobj, i++, N_X);
