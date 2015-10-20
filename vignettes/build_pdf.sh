@@ -16,6 +16,8 @@ pdflatex phyclust-guide.Rnw
 Rscript -e "tools::compactPDF('.', gs_quality='ebook')"
 rm *.aux *.bbl *.blg *.log *.out *.toc *.bst *.cls
 
-mv -f *.pdf ../inst/doc/
+qpdf phyclust-guide.pdf ../inst/doc/phyclust-guide.pdf
+# mv -f *.pdf ../inst/doc/
+rm -f *.pdf
 cp -f *.Rnw ../inst/doc/
 cp -f *.html ../inst/doc/
