@@ -1,6 +1,6 @@
 Package: phyclust
 Version: 0.1-16
-Date: 2015-10-19
+Date: 2015-11-25
 Title: Phylogenetic Clustering (Phyloclustering)
 Authors@R: c(person("Wei-Chen", "Chen", role = c("aut", "cre"), email =
         "wccsnow@gmail.com"), person("Karin", "Dorman", role =
@@ -27,8 +27,3 @@ Description: Phylogenetic clustering (phyloclustering) is an evolutionary
 BugReports: https://github.com/snoweye/phyclust/issues
 License: GPL (>= 2)
 URL: http://thirteen-01.stat.iastate.edu/snoweye/phyclust/
-Packaged: 2015-10-20 01:55:38 UTC; snoweye
-Author: Wei-Chen Chen [aut, cre],
-  Karin Dorman [aut]
-Maintainer: Wei-Chen Chen <wccsnow@gmail.com>
-NeedsCompilation: yes

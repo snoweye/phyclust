@@ -8,18 +8,21 @@
   neutral model.
 }
 \usage{
-ms(nsam = NULL, nreps = 1, opts = NULL, temp.file = NULL)
+ms(nsam = NULL, nreps = 1, opts = NULL, temp.file = NULL,
+   tbs.matrix = NULL)
 }
 \arguments{
   \item{nsam}{number of samples/coalescent trees, usually greater than 2.}
   \item{nreps}{number of replications.}
   \item{opts}{options as the standalone version.}
   \item{temp.file}{temporary file for ms output.}
+  \item{tbs.matrix}{a matrix for 'tbs' options given in opts.}
 }
 \details{
   This function directly reuses the C code of \code{ms} by arguments
-  as input from the STDIN. The options \code{opts} is followed from the
+  as input from the \code{opts}. The options \code{opts} is followed from the
   original \code{ms} except \code{nsam} and \code{nreps}.
+  Note that stdin, stdout, and pipe are all disable from \code{opts}.
 
   For examples, options commonly used in \pkg{phyclust} are:
   \itemize{
@@ -35,6 +38,10 @@ ms(nsam = NULL, nreps = 1, opts = NULL, temp.file = NULL)
   \code{ms()}. Users should take care the readings. By default, \code{ms()}
   uses a system temp file to store the output which is converted into R
   after the call and is deleted after converting.
+
+  \code{tbs.matrix} is a matrix to specify the values of \code{tbs} given
+  in \code{opts}. See \code{demo('simu_ms_tbs')} for an example how to
+  use this option.
 }
 \value{
   This function returns a vector, and each element stores one line of STDOUT
@@ -106,6 +113,12 @@ for(k in 1:K){
 }
 plot(tree.joint, main = paste("joint (", N, ")", sep = ""))
 axis(1)
+
+# use tbs option (an example from msdoc.pdf by Hudson, R.R.)
+tbs.matrix <- matrix(c(3.0, 3.5, 5.0, 8.5), nrow = 2)
+ret <- ms(nsam = 5, nreps = 2, opts = "-t tbs -r tbs 1000",
+          tbs.matrix = tbs.matrix)
+print(ret)
 }
 }
 \keyword{ms}

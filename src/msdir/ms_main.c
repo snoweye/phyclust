@@ -11,7 +11,7 @@ void ms_main(int argc, char *argv[]){
 	char **list, **cmatrix(), **tbsparamstrs ;
 	double probss, tmrca, ttot ;
 
-	R_ms_file_pointer = fopen(R_ms_file_name, "w");
+	R_ms_file_pointer = fopen(R_ms_file_name, "a");
 
 	ntbs = 0 ;   /* these next few lines are for reading in parameters from a file (for each sample) */
 	tbsparamstrs = (char **)malloc( argc*sizeof(char *) ) ;

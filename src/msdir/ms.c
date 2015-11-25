@@ -1144,7 +1144,7 @@ double gasdev(m,v)
 	float fac,r,v1,v2;
 	double ran1();
 
-	if  (iset == 0) {
+//WCC	if  (iset == 0) {
 		do {
 			v1=2.0*ran1()-1.0;
 			v2=2.0*ran1()-1.0;
@@ -1152,11 +1152,11 @@ double gasdev(m,v)
 		} while (r >= 1.0);
 		fac=sqrt(-2.0*log(r)/r);
 		gset= v1*fac;
-		iset=1;
+//WCC		iset=1;
 		return( m + sqrt(v)*v2*fac);
-	} else {
-		iset=0;
-		return( m + sqrt(v)*gset ) ;
-	}
+//WCC	} else {
+//WCC		iset=0;
+//WCC		return( m + sqrt(v)*gset ) ;
+//WCC	}
 }
 
