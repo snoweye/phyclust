@@ -41,7 +41,10 @@ ms(nsam = NULL, nreps = 1, opts = NULL, temp.file = NULL,
 
   \code{tbs.matrix} is a matrix to specify the values of \code{tbs} given
   in \code{opts}. See \code{demo('simu_ms_tbs')} for an example how to
-  use this option.
+  use this additional option. This option has been slightly tweaked by
+  utilizing \code{tbs} options in the standalone \code{ms}. However,
+  the output format is not the same as that in the standalone \code{ms}.
+  Post-process is required with caution.
 }
 \value{
   This function returns a vector, and each element stores one line of STDOUT
