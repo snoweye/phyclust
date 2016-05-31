@@ -24,7 +24,7 @@ examples.
 
 ## Installation
 
-pbdZMQ requires
+phyclust requires
 * R version 3.0.0 or higher.
 * R package ape.
 
