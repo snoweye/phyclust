@@ -33,7 +33,7 @@ The package can be installed from the CRAN via the usual
 
 ```r
 library(devtools)
-install_github("RBigData/phyclust")
+install_github("snoweye/phyclust")
 ```
 
 
