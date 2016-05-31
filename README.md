@@ -1,6 +1,6 @@
 # phyclust
 
-* **License:** [![License](http://img.shields.io/badge/license-GPL%20v3-orange.svg?style=flat)](http://www.gnu.org/licenses/gpl-2.0.en.html)
+* **License:** [![License](http://img.shields.io/badge/license-GPL%20v2-orange.svg?style=flat)](http://www.gnu.org/licenses/gpl-2.0.en.html)
 * **Download:** [![Download](http://cranlogs.r-pkg.org/badges/phyclust)](https://cran.r-project.org/package=phyclust)
 * **Author:** Wei-Chen Chen and Karin Dorman
 
