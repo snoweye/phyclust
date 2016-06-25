@@ -20,10 +20,14 @@ read.phylip.format <- function(filename, byrow = TRUE, sep = ""){
 ### Read data and transfer to nid.
   op.org <- options("stringsAsFactors")
   options(stringsAsFactors = FALSE)
-  tmp <- read.table(filename, sep = "", quote = "", skip = 1, fill = TRUE)
+  tmp <- read.table(filename, sep = "", quote = "", skip = 1, fill = TRUE,
+                    colClasses = "character")
   options(op.org)
 
 ### Split the data by reading blocks and rejoin them by sequences.
+  if(nrow(tmp) != ret$nseq){
+    stop(paste("ndata=", nrow(tmp), ", nseq=", ret$nseq, sep = ""))
+  }
   ret$org.code <- split(tmp, gl(nrow(tmp) / ret$nseq, ret$nseq))
   ret$org.code <- do.call("cbind", ret$org.code)
   ret$org.code <- as.matrix(ret$org.code, nrow = ret$nseq)
