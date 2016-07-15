@@ -1,3 +1,6 @@
+2016-07-14: Ver. 0.1-17
+  * Fix a read.table bug.
+
 2015-11-25: Ver. 0.1-16
   * Change "gasdev(m,v)" in "src/msdir/ms.c" to avoid different outcomes from
     the same seed. (static int is not supposed to act like that)

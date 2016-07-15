@@ -1,6 +1,6 @@
 Package: phyclust
 Version: 0.1-17
-Date: 2016-06-24
+Date: 2016-07-14
 Title: Phylogenetic Clustering (Phyloclustering)
 Authors@R: c(person("Wei-Chen", "Chen", role = c("aut", "cre"), email =
         "wccsnow@gmail.com"), person("Karin", "Dorman", role =
