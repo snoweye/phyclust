@@ -35,7 +35,7 @@ gen.seq.SNP(rooted.tree, pi, L, rate.scale = 1, anc.seq = NULL)
 }
 \references{
   Phylogenetic Clustering Website:
-  \url{http://thirteen-01.stat.iastate.edu/snoweye/phyclust/}
+  \url{http://snoweye.github.io/phyclust/}
 }
 \author{
   Wei-Chen Chen \email{wccsnow@gmail.com}

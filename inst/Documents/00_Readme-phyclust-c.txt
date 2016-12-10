@@ -5,7 +5,7 @@ Author: Wei-Chen Chen and Karin S. Dorman
 Maintainer: Wei-Chen Chen <wccsnow@gmail.com>
 Description: Model Based Phylogenetic Clustering
 License: GPL (>= 2)
-URL: http://thirteen-01.stat.iastate.edu/snoweye/phyclust/
+URL: http://snoweye.github.io/phyclust/
 
 Examples of main functions are in "test/" and short commands to compile
 is in "test/make.test". A quick example is "test_toy.c" and one can

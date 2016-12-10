@@ -51,7 +51,7 @@ phyclust.e.step(X, ret.phyclust = NULL, K = NULL, Eta = NULL,
 }
 \references{
   Phylogenetic Clustering Website:
-  \url{http://thirteen-01.stat.iastate.edu/snoweye/phyclust/}
+  \url{http://snoweye.github.io/phyclust/}
 }
 \author{
   Wei-Chen Chen \email{wccsnow@gmail.com}

@@ -37,7 +37,7 @@
 }
 \references{
   Phylogenetic Clustering Website:
-  \url{http://thirteen-01.stat.iastate.edu/snoweye/phyclust/}
+  \url{http://snoweye.github.io/phyclust/}
 
   Biernacki, C. and Celeux, G. and Govaert, G. (2003)
   \dQuote{Choosing starting values for the EM algorithm for getting the

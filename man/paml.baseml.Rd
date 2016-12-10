@@ -88,7 +88,7 @@ paml.baseml.show.default()
 }
 \references{
   Phylogenetic Clustering Website:
-  \url{http://thirteen-01.stat.iastate.edu/snoweye/phyclust/}
+  \url{http://snoweye.github.io/phyclust/}
 
   Yang, Z. (1997)
   \dQuote{PAML: a program package for phylogenetic analysis by maximum

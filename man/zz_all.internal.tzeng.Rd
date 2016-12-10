@@ -53,7 +53,7 @@
 }
 \references{
   Phylogenetic Clustering Website:
-  \url{http://thirteen-01.stat.iastate.edu/snoweye/phyclust/}
+  \url{http://snoweye.github.io/phyclust/}
 
   Tzeng, J.Y. (2005)
   \dQuote{Evolutionary-Based Grouping of Haplotypes in Association Analysis},

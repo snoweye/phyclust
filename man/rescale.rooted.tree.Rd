@@ -23,7 +23,7 @@ rescale.rooted.tree(rooted.tree, scale.height = 1)
 }
 \references{
   Phylogenetic Clustering Website:
-  \url{http://thirteen-01.stat.iastate.edu/snoweye/phyclust/}
+  \url{http://snoweye.github.io/phyclust/}
 }
 \author{
   Wei-Chen Chen \email{wccsnow@gmail.com}

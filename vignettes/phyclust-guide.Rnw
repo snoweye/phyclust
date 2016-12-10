@@ -30,9 +30,7 @@ Wei-Chen Chen
 \\
 \\
 \large
-Center for Biologics Evaluation and Research \\
-\large
-Food and Drug Adminstration \\
+pbdR Core Team \\
 \large
 Silver Spring, MD, USA \\
 \\
@@ -70,7 +68,7 @@ Silver Spring, MD, USA \\
 \Address{
   Wei-Chen Chen\\
   E-mail: \email{wccsnow@gmail.com}\\
-  URL: \url{http://thirteen-01.stat.iastate.edu/snoweye/phyclust/}
+  URL: \url{http://snoweye.github.io/phyclust/}
 }
 %% It is also possible to add a telephone and fax number
 %% before the e-mail in the following format:

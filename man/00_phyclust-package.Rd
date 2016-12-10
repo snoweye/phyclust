@@ -59,7 +59,7 @@
 }
 \references{
   Phylogenetic Clustering Website:
-  \url{http://thirteen-01.stat.iastate.edu/snoweye/phyclust/}
+  \url{http://snoweye.github.io/phyclust/}
 
   Chen, W.-C. (2011)
   \dQuote{Overlapping codon model, phylogenetic clustering, and alternative

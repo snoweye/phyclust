@@ -70,7 +70,7 @@ seqgen(opts = NULL, rooted.tree = NULL, newick.tree = NULL, input = NULL,
 }
 \references{
   Phylogenetic Clustering Website:
-  \url{http://thirteen-01.stat.iastate.edu/snoweye/phyclust/}
+  \url{http://snoweye.github.io/phyclust/}
 
   Rambaut, A. and Grassly, N.C. (1997)
   \dQuote{Seq-Gen: An Application for the Monte Carlo Simulation of DNA

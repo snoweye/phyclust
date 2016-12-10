@@ -58,7 +58,7 @@ ms(nsam = NULL, nreps = 1, opts = NULL, temp.file = NULL,
 }
 \references{
   Phylogenetic Clustering Website:
-  \url{http://thirteen-01.stat.iastate.edu/snoweye/phyclust/}
+  \url{http://snoweye.github.io/phyclust/}
 
   Hudson, R.R. (2002)
   \dQuote{Generating Samples under a Wright-Fisher Neutral Model of Genetic
