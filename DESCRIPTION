@@ -26,6 +26,6 @@ Description: Phylogenetic clustering (phyloclustering) is an evolutionary
         examples.
 BugReports: https://github.com/snoweye/phyclust/issues
 License: GPL (>= 2)
-URL: http://snoweye.github.io/phyclust/phyclust/
+URL: http://snoweye.github.io/hyclust/
 NeedsCompilation: yes
 Maintainer: Wei-Chen Chen <wccsnow@gmail.com>
