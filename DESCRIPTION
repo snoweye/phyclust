@@ -19,13 +19,17 @@ Description: Phylogenetic clustering (phyloclustering) is an evolutionary
         molecular sequences representative of those subpopulations. It is
         designed in C for performance, interfaced with R for visualization,
         and incorporates other popular open source programs including
-        ms (Hudson 2002), seq-gen (Rambaut and Grassly 1997),
-        Hap-Clustering (Tzeng 2005) and PAML baseml (Yang 1997, 2007), for
-        simulating data, additional analyses, and searching the best tree.
+        ms (Hudson 2002) <doi:10.1093/bioinformatics/18.2.337>,
+        seq-gen (Rambaut and Grassly 1997)
+        <doi:10.1093/bioinformatics/13.3.235>,
+        Hap-Clustering (Tzeng 2005) <doi:10.1002/gepi.20063> and
+        PAML baseml (Yang 1997, 2007) <doi:10.1093/bioinformatics/13.5.555>,
+        <doi:10.1093/molbev/msm088>,
+        for simulating data, additional analyses, and searching the best tree.
         See the phyclust website for more information, documentations and
         examples.
 BugReports: https://github.com/snoweye/phyclust/issues
 License: GPL (>= 2)
-URL: http://snoweye.github.io/hyclust/
+URL: http://snoweye.github.io/phyclust/
 NeedsCompilation: yes
 Maintainer: Wei-Chen Chen <wccsnow@gmail.com>
