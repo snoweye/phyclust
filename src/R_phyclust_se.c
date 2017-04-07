@@ -243,6 +243,7 @@ SEXP initialize_emptr_se(EMPTR_SE emptr, phyclust_struct *pcs){
 
 	emptr->C_protect_length = 5 + emobj_length + QA_length + converge_length + se_length;
 
+	UNPROTECT(C_protect_length);
 	return(emobj);
 } /* End of initialize_emptr_se(). */
 
@@ -266,6 +267,7 @@ void update_emptr_se(EMPTR_SE emptr, phyclust_struct *pcs, SEXP emobj){
 	PROTECT(se_f_err = allocVector(REALSXP, pcs->ncode * tmp_ncode));
 	SET_VECTOR_ELT(se, i, se_f_err);
 	emptr->C_se_f_err = REAL(se_f_err);
+	UNPROTECT(1);
 } /* End of update_emptr_se(). */
 
 void copy_all_to_emptr_se(phyclust_struct *pcs, Q_matrix_array *QA,

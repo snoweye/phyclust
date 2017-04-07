@@ -1,3 +1,6 @@
+2017-04-07: Ver. 0.1-18
+  * Add UNPROTECT() to several C files.
+
 2016-12-10: Ver. 0.1-18
   * Migrate all documents to the new website.
 
