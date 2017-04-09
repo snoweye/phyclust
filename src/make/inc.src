@@ -13,4 +13,5 @@ R_phyclust_se_update.o \
 R_phyclust_struct.o \
 R_phyclust_update.o \
 RRand.o \
-R_RRand.o
+R_RRand.o \
+zzz.o
