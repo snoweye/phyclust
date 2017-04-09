@@ -1,24 +1,17 @@
 #include <R.h>
-#include <Rinternals.h>
 #include <R_ext/Rdynload.h>
 
-#include "R_phyclust.h"
-#include "R_phyclust_se.h"
-#include "R_ms.h"
+#include "zzz.h"
 
 static const R_CallMethodDef callMethods[] = {
-	{"getListElement", (DL_FUNC) &getListElement, 2},
-	{"initialize_emptr", (DL_FUNC) &getListElement, 2},
 	{"R_phyclust", (DL_FUNC) &R_phyclust, 7},
 	{"R_phyclust_edist", (DL_FUNC) &R_phyclust_edist, 4},
 	{"R_phyclust_em_step", (DL_FUNC) &R_phyclust_em_step, 11},
 	{"R_phyclust_e_step", (DL_FUNC) &R_phyclust_e_step, 12},
 	{"R_phyclust_m_step", (DL_FUNC) &R_phyclust_m_step, 10},
 	{"R_phyclust_find_consensus", (DL_FUNC) &R_phyclust_find_consensus, 5},
-	{"R_update_phyclust_label", (DL_FUNC) &R_update_phyclust_label, 2},
 	{"R_phyclust_logL", (DL_FUNC) &R_phyclust_logL, 11},
 	{"R_phyclust_logPt", (DL_FUNC) &R_phyclust_logPt, 5},
-	{"initialize_emptr_se", (DL_FUNC) &initialize_emptr_se, 2},
 	{"R_phyclust_se", (DL_FUNC) &R_phyclust_se, 7},
 	{"R_phyclust_se_update", (DL_FUNC) &R_phyclust_se_update, 9},
 	{"R_phyclust_update", (DL_FUNC) &R_phyclust_update, 9},
