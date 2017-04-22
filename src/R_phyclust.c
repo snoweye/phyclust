@@ -205,7 +205,7 @@ SEXP initialize_emptr(EMPTR emptr, phyclust_struct *pcs){
 
 	emptr->C_protect_length = 4 + emobj_length + QA_length + converge_length;
 
-	UNPROTECT(C_protect_length);
+	UNPROTECT(emptr->C_protect_length);
 	return(emobj);
 } /* End of initialize_emptr(). */
 
