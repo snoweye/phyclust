@@ -1,4 +1,7 @@
-2017-04-07: Ver. 0.1-18
+2017-08-05: Ver. 0.1-20
+  * Fix call stack unbalance.
+
+2017-04-07: Ver. 0.1-19
   * Add UNPROTECT() to several C files.
 
 2016-12-10: Ver. 0.1-18

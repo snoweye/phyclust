@@ -4,7 +4,7 @@ citEntry(
   entry = "Manual",
   title = "Overlapping Codon Model, Phylogenetic Clustering, and Alternative
            Partial Expectation Conditional Maximization Algorithm",
-  author = personList(as.person("Chen, W.-C.")),
+  author = personList(as.person("Wei-Chen Chen")),
   journal = "Ph.D. Diss., Iowa Stat University",
   year = "2011",
   url = "http://gradworks.umi.com/34/73/3473002.html",
