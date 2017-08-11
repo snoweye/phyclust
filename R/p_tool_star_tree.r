@@ -4,7 +4,7 @@ get.rooted.tree.height <- function(rooted.tree, tol = .Machine$double.eps^0.5){
     stop("A rooted tree is required")
   }
   if(rooted.tree$Nnode > 1){
-    if(!is.ultrametric(rooted.tree, tol = tol)){
+    if(!is.ultrametric(rooted.tree, tol = tol, option = 2)){
       stop("A rooted tree is not ultrametric")
     }
   }
