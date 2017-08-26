@@ -52,7 +52,7 @@ phyclust.em.step(X, ret.phyclust = NULL, K = NULL, Eta = NULL,
   \code{\link{phyclust.m.step}}.
 }
 \examples{
-\dontrun{
+%\dontrun{
 library(phyclust, quiet = TRUE)
 
 set.seed(1234)
@@ -70,6 +70,6 @@ semi.label <- rep(0, nrow(X))
 semi.label[1:3] <- 1
 ret.3 <- phyclust.em.step(X, ret.phyclust = ret.1, label = semi.label)
 str(ret.3)
-}
+%}
 }
 \keyword{phyclust stepwise}
