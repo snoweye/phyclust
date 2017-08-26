@@ -45,7 +45,7 @@ gen.seq.SNP(rooted.tree, pi, L, rate.scale = 1, anc.seq = NULL)
   \code{\link{seqgen}}.
 }
 \examples{
-\dontrun{
+%\dontrun{
 library(phyclust, quiet = TRUE)
 
 # Generate a tree
@@ -77,6 +77,6 @@ paste(sid2snp(anc.SNP), collapse = "")
 # evolve 5 times longer
 (SNP.2 <- gen.seq.SNP(tree.ms, pi.SNP, L, rate.scale = 5,
                       anc.seq = anc.SNP))
-}
+%}
 }
 \keyword{simulation}
