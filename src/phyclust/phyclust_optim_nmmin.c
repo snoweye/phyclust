@@ -167,7 +167,7 @@ int optim_nmmin(int n, double *Bvec, double *X, double *Fmin,
     double oldsize;
     double **P;
     double size, step, temp, trystep;
-    char tstr[6];
+    char tstr[10];
     double VH, VL, VR;
 
     if (maxit <= 0) {

@@ -1,3 +1,8 @@
+2017-11-18: Ver. 0.1-21
+  * Fix a warning from CRAN as
+    phyclust/phyclust_optim_nmmin.c:260:21: warning: ‘%5d’ directive writing
+    between 5 and 10 bytes into a region of size 6 [-Wformat-overflow=] 
+
 2017-08-05: Ver. 0.1-20
   * Fix call stack unbalance.
 
