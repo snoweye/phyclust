@@ -23,7 +23,7 @@ plotstruct <- function(Z, X.class = NULL, sort.inside.class = TRUE,
 
   if(sort.inside.class && is.null(X.class)){
     for(k in 1:K){
-      tmp.Z <- Z[class.id == k, ]
+      tmp.Z <- matrix(Z[class.id == k, ], ncol = K)
       id.X <- order(tmp.Z[, k], decreasing = TRUE)
       Z[class.id == k,] <- tmp.Z[id.X,]
     }
