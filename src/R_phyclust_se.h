@@ -9,7 +9,7 @@ void copy_R_EMC_to_EMC_se(SEXP R_EMC, em_control *EMC);
 typedef struct _emptr_se	*EMPTR_SE;
 
 struct _emptr_se{
-	int C_protect_length;
+	/* int C_protect_length; */
 	int *C_N_X_org, *C_N_X, *C_L, *C_K, *C_p,
 	    *C_converge_flag, *C_converge_iter, *C_converge_inner_iter, *C_converge_cm_iter, *C_check_param,
 	    *C_N_seg_site, *C_label_method;

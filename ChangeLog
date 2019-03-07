@@ -1,3 +1,6 @@
+2019-03-07: Ver. 0.1-22
+  * Move PROTECT to the caller functions.
+
 2017-11-18: Ver. 0.1-21
   * Fix a warning from CRAN as
     phyclust/phyclust_optim_nmmin.c:260:21: warning: ‘%5d’ directive writing

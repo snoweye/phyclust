@@ -97,7 +97,7 @@
   Paradis E., Claude J., and Strimmer K. (2004)
   \dQuote{APE: analyses of phylogenetics and evolution in R language},
   \emph{Bioinformatics}, \bold{20}, 289-290.
-  \url{http://ape.mpl.ird.fr/}
+  \url{http://ape-package.ird.fr/}
 }
 \author{
   Wei-Chen Chen \email{wccsnow@gmail.com}

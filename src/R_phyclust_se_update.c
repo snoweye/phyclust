@@ -52,7 +52,7 @@ SEXP R_phyclust_se_update(SEXP R_N_X_org, SEXP R_L, SEXP R_X, SEXP R_EMC,
 
 	/* Assign data, read only. */
 	pcs = R_initialize_phyclust_struct(EMC->code_type, *C_N_X_org, *C_L, *C_K);
-	emobj = initialize_emptr_se(emptr, pcs);		/* !! Don't move this. */
+	PROTECT(emobj = initialize_emptr_se(emptr, pcs));		/* !! Don't move this. */
 	tmp_ptr = INTEGER(R_X);
 	for(i = 0; i < *C_N_X_org; i++){
 		pcs->X_org[i] = tmp_ptr;			/* Assign poiners. */
@@ -115,10 +115,11 @@ SEXP R_phyclust_se_update(SEXP R_N_X_org, SEXP R_L, SEXP R_X, SEXP R_EMC,
 	R_free_phyclust_struct(pcs);
 	free_em_fp(EMFP);
 	free_Q_matrix_array(QA);
-	C_protect_length = emptr->C_protect_length;
+	/* C_protect_length = emptr->C_protect_length; */
 	free(emptr);
 
-	UNPROTECT(C_protect_length);
+	/* UNPROTECT(C_protect_length); */
+	UNPROTECT(1);
 	return(emobj);
 } /* End of SEXP R_phyclust_se_update(). */
 

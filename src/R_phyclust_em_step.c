@@ -39,7 +39,7 @@ SEXP R_phyclust_em_step(SEXP R_N_X_org, SEXP R_L, SEXP R_X, SEXP R_K,
 	/* Declare variables for R's returning. */
 	EMPTR emptr = allocate_emptr();
 	SEXP emobj;
-	int C_protect_length;
+	/* int C_protect_length; */
 	
 	/* Declare variables for processing. */
 	int i, j, *tmp_ptr;
@@ -60,7 +60,7 @@ SEXP R_phyclust_em_step(SEXP R_N_X_org, SEXP R_L, SEXP R_X, SEXP R_K,
 
 	/* Assign data, read only. */
 	pcs = R_initialize_phyclust_struct(EMC->code_type, *C_N_X_org, *C_L, *C_K);
-	emobj = initialize_emptr(emptr, pcs);			/* !! Don't move this. */
+	PROTECT(emobj = initialize_emptr(emptr, pcs));			/* !! Don't move this. */
 	tmp_ptr = INTEGER(R_X);
 	for(i = 0; i < *C_N_X_org; i++){
 		pcs->X_org[i] = tmp_ptr;			/* Assign poiners. */
@@ -113,10 +113,11 @@ SEXP R_phyclust_em_step(SEXP R_N_X_org, SEXP R_L, SEXP R_X, SEXP R_K,
 	free_Q_matrix_array(new_QA);
 	free_Q_matrix_array(org_QA);
 	free_em_phyclust_struct(empcs);
-	C_protect_length = emptr->C_protect_length;
+	/* C_protect_length = emptr->C_protect_length; */
 	free(emptr);
 
-	UNPROTECT(C_protect_length);
+	/* UNPROTECT(C_protect_length); */
+	UNPROTECT(1);
 	return(emobj);
 } /* End of SEXP R_phyclust_em_step(). */
 
@@ -272,7 +273,7 @@ SEXP R_phyclust_m_step(SEXP R_N_X_org, SEXP R_L, SEXP R_X, SEXP R_K,
 	/* Declare variables for R's returning. */
 	EMPTR emptr = allocate_emptr();
 	SEXP emobj;
-	int C_protect_length;
+	/* int C_protect_length; */
 	
 	/* Declare variables for processing. */
 	int i, k, *tmp_ptr;
@@ -293,7 +294,7 @@ SEXP R_phyclust_m_step(SEXP R_N_X_org, SEXP R_L, SEXP R_X, SEXP R_K,
 
 	/* Assign data, read only. */
 	pcs = R_initialize_phyclust_struct(EMC->code_type, *C_N_X_org, *C_L, *C_K);
-	emobj = initialize_emptr(emptr, pcs);
+	PROTECT(emobj = initialize_emptr(emptr, pcs));
 	tmp_ptr = INTEGER(R_X);
 	for(i = 0; i < *C_N_X_org; i++){
 		pcs->X_org[i] = tmp_ptr;
@@ -339,9 +340,10 @@ SEXP R_phyclust_m_step(SEXP R_N_X_org, SEXP R_L, SEXP R_X, SEXP R_K,
 	free_Q_matrix_array(new_QA);
 	free_Q_matrix_array(org_QA);
 	free_em_phyclust_struct(empcs);
-	C_protect_length = emptr->C_protect_length;
+	/* C_protect_length = emptr->C_protect_length; */
 	free(emptr);
 
-	UNPROTECT(C_protect_length);
+	/* UNPROTECT(C_protect_length); */
+	UNPROTECT(1);
 	return(emobj);
 } /* End of SEXP R_phyclust_m_step(). */

@@ -74,39 +74,39 @@ SEXP initialize_emptr(EMPTR emptr, phyclust_struct *pcs){
 	double *tmp_ptr_double;
 
 	/* Allocate and protect storages. */
-  	PROTECT(emobj = allocVector(VECSXP, emobj_length));
-  	PROTECT(emobj_names = allocVector(STRSXP, emobj_length));
-  	PROTECT(QA_names = allocVector(STRSXP, QA_length));
-  	PROTECT(converge_names = allocVector(STRSXP, converge_length));
+  	emobj = allocVector(VECSXP, emobj_length);
+  	emobj_names = allocVector(STRSXP, emobj_length);
+  	QA_names = allocVector(STRSXP, QA_length);
+  	converge_names = allocVector(STRSXP, converge_length);
 	
-  	PROTECT(N_X_org = allocVector(INTSXP, 1));
-  	PROTECT(N_X = allocVector(INTSXP, 1));
-  	PROTECT(L = allocVector(INTSXP, 1));
-  	PROTECT(K = allocVector(INTSXP, 1));
-  	PROTECT(Eta = allocVector(REALSXP, pcs->K));
-	PROTECT(Z_normalized = allocVector(REALSXP, pcs->N_X_org * pcs->K));
-  	PROTECT(Mu = allocVector(INTSXP, pcs->K * pcs->L));
-  	PROTECT(QA = allocVector(VECSXP, QA_length));
-	  	PROTECT(pi = allocVector(REALSXP, pcs->ncode * pcs->K));
-  		PROTECT(kappa = allocVector(REALSXP, 1 * pcs->K));
-  		PROTECT(Tt = allocVector(REALSXP, 1 * pcs->K));
-  	PROTECT(logL = allocVector(REALSXP, 1));
-  	PROTECT(p = allocVector(INTSXP, 1));
-  	PROTECT(bic = allocVector(REALSXP, 1));
-  	PROTECT(aic = allocVector(REALSXP, 1));
-  	PROTECT(icl = allocVector(REALSXP, 1));
-  	PROTECT(N_seg_site = allocVector(INTSXP, 1));
-  	PROTECT(class_id = allocVector(INTSXP, pcs->N_X_org));
-  	PROTECT(n_class = allocVector(INTSXP, pcs->K));
-  	PROTECT(converge = allocVector(VECSXP, converge_length));
-		PROTECT(converge_eps = allocVector(REALSXP, 1));
-		PROTECT(converge_error = allocVector(REALSXP, 1));
-		PROTECT(converge_flag = allocVector(INTSXP, 1));
-		PROTECT(converge_iter = allocVector(INTSXP, 1));
-		PROTECT(converge_inner_iter = allocVector(INTSXP, 1));
-		PROTECT(converge_cm_iter = allocVector(INTSXP, 1));
-		PROTECT(check_param = allocVector(INTSXP, 1));
-	PROTECT(label_method = allocVector(INTSXP, 1));
+  	N_X_org = allocVector(INTSXP, 1);
+  	N_X = allocVector(INTSXP, 1);
+  	L = allocVector(INTSXP, 1);
+  	K = allocVector(INTSXP, 1);
+  	Eta = allocVector(REALSXP, pcs->K);
+	Z_normalized = allocVector(REALSXP, pcs->N_X_org * pcs->K);
+  	Mu = allocVector(INTSXP, pcs->K * pcs->L);
+  	QA = allocVector(VECSXP, QA_length);
+	  	pi = allocVector(REALSXP, pcs->ncode * pcs->K);
+  		kappa = allocVector(REALSXP, 1 * pcs->K);
+  		Tt = allocVector(REALSXP, 1 * pcs->K);
+  	logL = allocVector(REALSXP, 1);
+  	p = allocVector(INTSXP, 1);
+  	bic = allocVector(REALSXP, 1);
+  	aic = allocVector(REALSXP, 1);
+  	icl = allocVector(REALSXP, 1);
+  	N_seg_site = allocVector(INTSXP, 1);
+  	class_id = allocVector(INTSXP, pcs->N_X_org);
+  	n_class = allocVector(INTSXP, pcs->K);
+  	converge = allocVector(VECSXP, converge_length);
+		converge_eps = allocVector(REALSXP, 1);
+		converge_error = allocVector(REALSXP, 1);
+		converge_flag = allocVector(INTSXP, 1);
+		converge_iter = allocVector(INTSXP, 1);
+		converge_inner_iter = allocVector(INTSXP, 1);
+		converge_cm_iter = allocVector(INTSXP, 1);
+		check_param = allocVector(INTSXP, 1);
+	label_method = allocVector(INTSXP, 1);
 
 	/* Set the elements and names. */
 	i = 0;
@@ -203,7 +203,7 @@ SEXP initialize_emptr(EMPTR emptr, phyclust_struct *pcs){
 	emptr->C_check_param = INTEGER(check_param);
 	emptr->C_label_method = INTEGER(label_method);
 
-	emptr->C_protect_length = 4 + emobj_length + QA_length + converge_length;
+	/* emptr->C_protect_length = 4 + emobj_length + QA_length + converge_length; */
 
 	/* Do NOT call UNPROTECT() within this constructor!! */
 	// UNPROTECT(emptr->C_protect_length);
@@ -269,7 +269,7 @@ SEXP R_phyclust(SEXP R_N_X_org, SEXP R_L, SEXP R_K, SEXP R_X, SEXP R_EMC, SEXP R
 	/* Declare variables for R's returning. */
 	EMPTR emptr = allocate_emptr();
 	SEXP emobj;
-	int C_protect_length;
+	/* int C_protect_length; */
 
 	/* Declare variables for processing. */
 	int i, *tmp_ptr;
@@ -287,7 +287,7 @@ SEXP R_phyclust(SEXP R_N_X_org, SEXP R_L, SEXP R_K, SEXP R_X, SEXP R_EMC, SEXP R
 
 	/* Assign data. */
 	pcs = R_initialize_phyclust_struct(EMC->code_type, *C_N_X_org, *C_L, *C_K);
-	emobj = initialize_emptr(emptr, pcs);		 /* !! Don't move this. */
+	PROTECT(emobj = initialize_emptr(emptr, pcs));		 /* !! Don't move this. */
 	tmp_ptr = INTEGER(R_X);
 	for(i = 0; i < *C_N_X_org; i++){
 		pcs->X_org[i] = tmp_ptr;
@@ -322,10 +322,11 @@ SEXP R_phyclust(SEXP R_N_X_org, SEXP R_L, SEXP R_K, SEXP R_X, SEXP R_EMC, SEXP R
 	R_free_phyclust_struct(pcs);
 	free_em_fp(EMFP);
 	free_Q_matrix_array(QA);
-	C_protect_length = emptr->C_protect_length;
+	/* C_protect_length = emptr->C_protect_length; */
 	free(emptr);
 
-	UNPROTECT(C_protect_length);
+	/* UNPROTECT(C_protect_length); */
+	UNPROTECT(1);
 	return(emobj);
 } /* End of SEXP R_phyclust(). */
 
