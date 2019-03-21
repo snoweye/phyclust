@@ -1,4 +1,7 @@
-2019-03-07: Ver. 0.1-22
+2019-03-20: Ver. 0.1-24
+  * Push some PROTECT and UNPROTECT back within the call.
+
+2019-03-07: Ver. 0.1-23
   * Move PROTECT to the caller functions.
 
 2017-11-18: Ver. 0.1-21
