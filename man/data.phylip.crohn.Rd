@@ -16,7 +16,7 @@
 }
 \references{
   Phylogenetic Clustering Website:
-  \url{http://snoweye.github.io/phyclust/}
+  \url{https://snoweye.github.io/phyclust/}
 
   Hugot, J.P., et al. (2001)
   \dQuote{Association of NOD2 Leucine-Rich Repeat Variants with

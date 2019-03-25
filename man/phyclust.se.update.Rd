@@ -39,7 +39,7 @@ phyclust.se.update(X, EMC = .EMC, ret.phyclust = NULL,
 }
 \references{
   Phylogenetic Clustering Website:
-  \url{http://snoweye.github.io/phyclust/}
+  \url{https://snoweye.github.io/phyclust/}
 }
 \author{
   Wei-Chen Chen \email{wccsnow@gmail.com}

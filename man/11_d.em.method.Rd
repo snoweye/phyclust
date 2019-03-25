@@ -20,7 +20,7 @@
 }
 \references{
   Phylogenetic Clustering Website:
-  \url{http://snoweye.github.io/phyclust/}
+  \url{https://snoweye.github.io/phyclust/}
 
   Dempster, A. and Laird, N. and Rubin, D. (1977)
   \dQuote{Maximum Likelihood Estimation from Incomplete Data

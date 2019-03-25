@@ -33,7 +33,7 @@ SEXP R_phyclust_se_update(SEXP R_N_X_org, SEXP R_L, SEXP R_X, SEXP R_EMC,
 	/* Declare variables for R's returning. */
 	EMPTR_SE emptr = allocate_emptr_se();
 	SEXP emobj;
-	int C_protect_length;
+	/* int C_protect_length; */
 	
 	/* Declare variables for processing. */
 	int i, j, *tmp_ptr;

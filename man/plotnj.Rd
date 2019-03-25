@@ -38,7 +38,7 @@ plotnj(unrooted.tree, X.class = NULL, type = "u", main = NULL,
 }
 \references{
   Phylogenetic Clustering Website:
-  \url{http://snoweye.github.io/phyclust/}
+  \url{https://snoweye.github.io/phyclust/}
 }
 \author{
   Wei-Chen Chen \email{wccsnow@gmail.com}

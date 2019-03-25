@@ -32,7 +32,7 @@
 
 \references{
   Phylogenetic Clustering Website:
-  \url{http://snoweye.github.io/phyclust/}
+  \url{https://snoweye.github.io/phyclust/}
 
   Jukes, T. H. and Cantor, C. R. (1969)
   \dQuote{Evolution of Protein Molecules},

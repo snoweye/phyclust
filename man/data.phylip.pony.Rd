@@ -16,7 +16,7 @@
 }
 \references{
   Phylogenetic Clustering Website:
-  \url{http://snoweye.github.io/phyclust/}
+  \url{https://snoweye.github.io/phyclust/}
 
   Belshan, M., et al. (2001)
   \dQuote{Genetic and Biological Variation in Equine Infectious Anemia

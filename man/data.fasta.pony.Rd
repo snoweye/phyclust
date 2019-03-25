@@ -16,7 +16,7 @@
 }
 \references{
   Phylogenetic Clustering Website:
-  \url{http://snoweye.github.io/phyclust/}
+  \url{https://snoweye.github.io/phyclust/}
 
   Baccam, P., et al. (2003)
   \dQuote{Subpopulations of Equine Infectious Anemia Virus Rev Coexist

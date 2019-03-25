@@ -34,7 +34,7 @@
 }
 \references{
   Phylogenetic Clustering Website:
-  \url{http://snoweye.github.io/phyclust/}
+  \url{https://snoweye.github.io/phyclust/}
 
   Saitou, N. and Nei, M. (1987),
   \dQuote{The Neighbor-Joining Method: A New Method for Reconstructing

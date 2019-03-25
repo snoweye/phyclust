@@ -27,7 +27,7 @@ RRand(trcl, prcl, lab = NULL)
 }
 \references{
   Phylogenetic Clustering Website:
-  \url{http://snoweye.github.io/phyclust/}
+  \url{https://snoweye.github.io/phyclust/}
 }
 \author{
   Ranjan Maitra.

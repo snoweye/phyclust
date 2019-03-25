@@ -27,7 +27,7 @@ plotgaps(X, code.type = .code.type[1], main = "Gaps Plot",
 }
 \references{
   Phylogenetic Clustering Website:
-  \url{http://snoweye.github.io/phyclust/}
+  \url{https://snoweye.github.io/phyclust/}
 }
 \author{
   Wei-Chen Chen \email{wccsnow@gmail.com}
