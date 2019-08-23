@@ -1139,7 +1139,7 @@ poisso(u)
 double gasdev(m,v)
 	double m, v;
 {
-	static int iset=0;
+//WCC	static int iset=0;
 	static float gset;
 	float fac,r,v1,v2;
 	double ran1();

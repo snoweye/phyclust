@@ -64,7 +64,7 @@ char *modelTitles[numModels]={
 	"F84: Felsenstein (1984)",
 	"GTR: General time reversible (nucleotides)",
 	"JTT: Jones, Taylor & Thornton (1992) CABIOS  8:275-282\n             DCMut version Kosiol & Goldman (2004) <http://www.ebi.ac.uk/goldman-srv/dayhoff/>",
-	"WAG: Whelan & Goldman (2001) Mol Biol Evol 18:691Ð699",
+	"WAG: Whelan & Goldman (2001) Mol Biol Evol 18:691-699",
 	"PAM: Dayhoff, Schwartz & Orcutt (1978)\n             DCMut version Kosiol & Goldman (2004) <http://www.ebi.ac.uk/goldman-srv/dayhoff/>",
 	"BLOSUM62: Henikoff & Henikoff (1992) PNAS USA 89:10915-10919",
 	"MTREV24: Adachi & Hasegawa (1996) J Mol Evol 42:459-468",

@@ -1,3 +1,7 @@
+2019-08-23: Ver. 0.1-25
+  * Fix illegal character encoding in string literal.
+  * Minors.
+
 2019-03-20: Ver. 0.1-24
   * Push some PROTECT and UNPROTECT back within the call.
 
