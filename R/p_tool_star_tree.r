@@ -17,7 +17,7 @@ get.rooted.tree.height <- function(rooted.tree, tol = .Machine$double.eps^0.5){
   ret <- rooted.tree$edge.length[edge.id[1]]
   repeat{
     edge.id <- which(edge.from == n.from)
-    if(length(edge.id) == 2){
+    if(length(edge.id) >= 2){
       n.from <- edge.to[edge.id[1]]
       ret <- ret + rooted.tree$edge.length[edge.id[1]]
     } else{
