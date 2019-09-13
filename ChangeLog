@@ -1,3 +1,6 @@
+2019-09-10: Ver. 0.1-26
+  * Fix a bug in "get.rooted.tree.height", see "https://github.com/snoweye/phyclust/issues/5" for details.
+
 2019-08-23: Ver. 0.1-25
   * Fix illegal character encoding in string literal.
   * Minors.
