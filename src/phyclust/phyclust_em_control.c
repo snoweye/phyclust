@@ -117,9 +117,9 @@ void update_em_control(em_control *EMC){
 	switch(EMC->code_type){
 		case SNP:
 			EMC->edist_model = D_HAMMING;
-			if(EMC->substitution_model != SNP_JC69 ||
-			   EMC->substitution_model != SNP_F81 ||
-			   EMC->substitution_model != E_SNP_F81){
+			if(!(EMC->substitution_model == SNP_JC69 ||
+			     EMC->substitution_model == SNP_F81 ||
+			     EMC->substitution_model == E_SNP_F81)){
 				EMC->substitution_model = SNP_JC69;
 			}
 			break;
