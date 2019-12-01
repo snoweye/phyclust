@@ -38,7 +38,7 @@ struct params {
 
 /* In "ms.c". */
 #define SITESINC 10
-unsigned int maxsites;
+extern unsigned int maxsites;
 
 struct node{
 	int abv;
@@ -52,10 +52,10 @@ struct segl {
 	int next;
 	};
 
-double *posit ;
-double segfac ;
-int count, ntbs, nseeds ;
-struct params pars ;	
+extern double *posit ;
+extern double segfac ;
+extern int count, ntbs, nseeds ;
+extern struct params pars ;	
 
 int gensam(char **list, double *pprobss, double *ptmrca, double *pttot);
 void ndes_setup(struct node *ptree, int nsam);
@@ -87,7 +87,7 @@ double gasdev(double m, double v);
 
 /* In "streec.c". */
 #define SEGINC 80;
-unsigned int seglimit;
+extern unsigned int seglimit;
 
 struct segl* segtre_mig(struct c_params *cp, int *pnsegs);
 int re(int nsam);

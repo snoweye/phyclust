@@ -63,9 +63,9 @@
 
 
 extern FILE *R_seq_gen_file_pointer;	//WCC:add
-TNode *avail;							//WCC:add
-long usedAvail;							//WCC:add
-long usedMalloc;						//WCC:add
+extern TNode *avail;						//WCC:add
+extern long usedAvail;						//WCC:add
+extern long usedMalloc;						//WCC:add
 int MAX_TIPS;							//WCC:add for -u
 
 

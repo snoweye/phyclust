@@ -102,7 +102,7 @@
 
 //WCC #define SITESINC 10 
 
-//WCC unsigned maxsites = SITESINC ;
+unsigned maxsites = SITESINC ;
 
 /* WCC move to "ms.h".
 struct node{
@@ -116,12 +116,12 @@ struct segl {
 	struct node *ptree;
 	int next;
 	};
+*/
 
 double *posit ;
 double segfac ;
 int count, ntbs, nseeds ;
 struct params pars ;	
-*/
 
 /* WCC
 main(argc,argv)

@@ -65,6 +65,14 @@ double freqRate[MAX_RATE_CATS];
 //WCC static short *invariable;
 //WCC static double *siteRates;
 
+//WCC:add
+double *matrix[MAX_RATE_CATS];
+double *vector;
+double *gammaRates;
+short *categories;
+short *invariable;
+double *siteRates;
+
 /* prototypes */
 
 char SetState(double *P);

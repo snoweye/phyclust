@@ -344,8 +344,12 @@ void copySptree(void);
 void printSptree(void);
 
 
+/* WCC: removed.
 enum {BASEseq=0, CODONseq, AAseq, CODON2AAseq} DataTypes;
 enum {PrBranch=1, PrNodeNum=2, PrLabel=4, PrAge=8, PrOmega=16} OutTreeOptions;
+*/
+enum {BASEseq=0, CODONseq, AAseq, CODON2AAseq};
+enum {PrBranch=1, PrNodeNum=2, PrLabel=4, PrAge=8, PrOmega=16};
 
 
 /* use mean (0) for discrete gamma instead of median (1) */
@@ -365,7 +369,7 @@ enum {PrBranch=1, PrNodeNum=2, PrLabel=4, PrAge=8, PrOmega=16} OutTreeOptions;
 
 
 //WCC:add
-FILE *R_paml_baseml_file_pointer;
+extern FILE *R_paml_baseml_file_pointer;
 
 
 #endif

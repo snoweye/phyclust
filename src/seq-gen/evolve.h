@@ -87,12 +87,12 @@ void WriteRates(FILE *fv);
 
 
 /*WCC Moved from "evolve.c". */
-double *matrix[MAX_RATE_CATS];
-double *vector;
-double *gammaRates;
-short *categories;
-short *invariable;
-double *siteRates;
+extern double *matrix[MAX_RATE_CATS];
+extern double *vector;
+extern double *gammaRates;
+extern short *categories;
+extern short *invariable;
+extern double *siteRates;
 
 
 #endif /* _EVOLVE_H_ */

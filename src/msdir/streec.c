@@ -64,6 +64,7 @@ static int *nnodes = NULL ;
 double t, cleft , pc, lnpc ;
 
 //WCC static unsigned seglimit = SEGINC ;
+unsigned seglimit ;
 static unsigned maxchr ;
 
 struct seg{

@@ -10,8 +10,8 @@
 #undef exit
 #define exit(a) error("%d\n", a)
 
-const char *R_ms_file_name;
-FILE *R_ms_file_pointer;
+extern const char *R_ms_file_name;
+extern FILE *R_ms_file_pointer;
 
 /* In "ms_main.c". */
 void ms_main(int argc, char *argv[]);

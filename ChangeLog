@@ -1,3 +1,6 @@
+2019-12-01: Ver. 0.1-28
+  * Fix multiple definition warnings due to "-fno-common" as default in gcc-10.
+
 2019-11-28: Ver. 0.1-27
   * Fix a compiler warning.
 

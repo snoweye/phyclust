@@ -4,6 +4,9 @@
 #include <Rinternals.h>
 #include "ms.h"
 
+const char *R_ms_file_name;
+FILE *R_ms_file_pointer;
+
 SEXP R_ms_main(SEXP R_argv, SEXP R_ms_file){
 	int argc, i;
 	const char **argv;
