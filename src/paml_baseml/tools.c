@@ -791,7 +791,12 @@ int Codon2AA(char codon[3], char aa[3], int icode, int *iaa)
    }
    else if(naa==2)  *iaa = 20; 
    else             *iaa = iaa0;
+/*WCC: gcc10 warns about this below.
+       '__builtin_strncpy' output may be truncated copying 3
+       bytes from a stron of length 3 "-Wstringop-truncation"
    strncpy(aa, AA3Str+*iaa*3, 3);
+*/
+   memcpy(aa, AA3Str+*iaa*3, 3);
 
    return(naa==1 ? 0 : (naa==0 ? -1 : 1));
 }
