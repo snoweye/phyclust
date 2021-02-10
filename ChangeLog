@@ -1,3 +1,7 @@
+2021-02-09: Ver. 0.1-30
+  * Change http to https.
+  * Change \A, \G, \C, and \T in vignettes to avoid conflicts.
+
 2020-05-10: Ver. 0.1-29
   * Fix warning '__builtin_strncpy' output truncated due to
     "-Wstringop-truncation" by gcc10.

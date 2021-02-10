@@ -8,10 +8,6 @@
 \usepackage{amsthm}
 \usepackage{amssymb}
 \newcommand{\vect}[1]{\boldsymbol{#1}}
-\newcommand{\A}{\mbox{A}}
-\newcommand{\C}{\mbox{C}}
-\newcommand{\G}{\mbox{G}}
-\newcommand{\T}{\mbox{T}}
 \definecolor{mygreen}{RGB}{0,150,0}
 
 
@@ -68,7 +64,7 @@ Silver Spring, MD, USA \\
 \Address{
   Wei-Chen Chen\\
   E-mail: \email{wccsnow@gmail.com}\\
-  URL: \url{http://snoweye.github.io/phyclust/}
+  URL: \url{https://snoweye.github.io/phyclust/}
 }
 %% It is also possible to add a telephone and fax number
 %% before the e-mail in the following format:
