@@ -1,3 +1,9 @@
+2022-10-01: Ver. 0.1-31
+  * Fix empty while() and for() warnings caught by clang.
+  * Fix \_ and \# warnings caught by checkRd.
+  * Change "http" to "https" in some Rd files.
+  * Use "is()" to replace "class()" inside the "if()" in some R code.
+
 2021-02-09: Ver. 0.1-30
   * Change http to https.
   * Change \A, \G, \C, and \T in vignettes to avoid conflicts.

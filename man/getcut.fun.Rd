@@ -33,7 +33,7 @@ getcut.fun(pp.org, nn, plot = 0)
   Tzeng, J.Y. (2005)
   \dQuote{Evolutionary-Based Grouping of Haplotypes in Association Analysis},
   \emph{Genetics Epidemiology}, \bold{28}, 220-231.
-  \url{http://www4.stat.ncsu.edu/~jytzeng/software.php}
+  \url{https://www4.stat.ncsu.edu/~jytzeng/software.php}
 
   Shannon, C.E. (1948)
   \dQuote{A mathematical theory of communication},

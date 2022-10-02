@@ -3,7 +3,7 @@
 plotnj <- function(unrooted.tree, X.class = NULL, type = "u", main = NULL,
     show.tip.label = FALSE, show.node.label = FALSE,
     edge.width = 1, edge.width.class = edge.width, ...){
-  if(class(unrooted.tree) != "phylo"){
+  if(!is(unrooted.tree, "phylo")){
     stop("This is not a phylo tree.")
   }
   if(any(unrooted.tree$edge < 0)){

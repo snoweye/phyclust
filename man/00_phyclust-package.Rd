@@ -92,7 +92,7 @@
   Tzeng, J.Y. (2005)
   \dQuote{Evolutionary-Based Grouping of Haplotypes in Association Analysis},
   \emph{Genetics Epidemiology}, \bold{28}, 220-231.
-  \url{http://www4.stat.ncsu.edu/~jytzeng/software.php}
+  \url{https://www4.stat.ncsu.edu/~jytzeng/software.php}
 
   Paradis E., Claude J., and Strimmer K. (2004)
   \dQuote{APE: analyses of phylogenetics and evolution in R language},

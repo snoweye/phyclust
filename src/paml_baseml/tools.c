@@ -1173,13 +1173,19 @@ int fillxc (double x[], double c, int n)
 { int i; for(i=0; i<n; i++) x[i]=c; return (0); }
 
 int xtoy (double x[], double y[], int n)
-{ int i; for (i=0; i<n; y[i]=x[i],i++) ;  return(0); }
+//WCC { int i; for (i=0; i<n; y[i]=x[i],i++) ;  return(0); }
+{ int i; for (i=0; i<n; y[i]=x[i],i++)
+         ;  return(0); } // WCC: to avoid empty body warnings by clang
 
 int abyx (double a, double x[], int n)
-{ int i; for (i=0; i<n; x[i]*=a,i++) ;  return(0); }
+//WCC { int i; for (i=0; i<n; x[i]*=a,i++) ;  return(0); }
+{ int i; for (i=0; i<n; x[i]*=a,i++)
+         ;  return(0); } // WCC: to avoid empty body warnings by clang
 
 int axtoy(double a, double x[], double y[], int n)
-{ int i; for (i=0; i<n; y[i] = a*x[i],i++) ;  return(0);}
+//WCC { int i; for (i=0; i<n; y[i] = a*x[i],i++) ;  return(0);}
+{ int i; for (i=0; i<n; y[i] = a*x[i],i++)
+         ;  return(0);} // WCC: to avoid empty body warnings by clang
 
 int axbytoz(double a, double x[], double b, double y[], double z[], int n)
 { int i; for(i=0; i<n; i++)   z[i] = a*x[i]+b*y[i];  return (0); }

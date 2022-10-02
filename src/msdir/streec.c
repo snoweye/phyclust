@@ -240,7 +240,9 @@ segtre_mig(struct c_params *cp, int *pnsegs )
 	    for(pop=0; pop<npop ; pop++) {     /* coalescent */
 		coal_prob = ((double)config[pop])*(config[pop]-1.) ;
 	        if( coal_prob > 0.0 ) {
-		   while( ( rdum = ran1() )  == .0 ) ;
+//WCC		   while( ( rdum = ran1() )  == .0 ) ;
+		   while( ( rdum = ran1() )  == .0 )
+		   ; // WCC: to avoid empty body warnings by clang
 	  	   if( alphag[pop] == 0 ){
 			 ttemp = -log( rdum )*size[pop] /coal_prob ;
 		         if( (eflag == 0) || (ttemp < tmin ) ){
@@ -473,7 +475,9 @@ cleftr( int nsam)
 	double x, sum, len  ;
 //WCC	int xover(int, int, int);
 
-while( (x = cleft*ran1() )== 0.0 )  ;
+//WCC while( (x = cleft*ran1() )== 0.0 )  ;
+while( (x = cleft*ran1() )== 0.0 )
+; // WCC: to avoid empty body warnings by clang
 	sum = 0.0 ;
 	ic = -1 ;
 	while ( sum < x ) {

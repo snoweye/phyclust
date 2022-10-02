@@ -17,7 +17,7 @@ phyclust.logL <- function(X, ret.phyclust = NULL,
                            code.type = code.type)
     }
   } else{
-    if(class(ret.phyclust) != "phyclust"){
+    if(!is(ret.phyclust, "phyclust")){
       stop("The ret.phyclust should be in a phyclust class.")
     }
   }

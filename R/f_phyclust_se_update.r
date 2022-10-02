@@ -18,7 +18,7 @@ phyclust.se.update <- function(X, EMC = .EMC, ret.phyclust = NULL,
                            code.type = EMC$code.type)
     }
   } else{
-    if(class(ret.phyclust) != "phyclust"){
+    if(!is(ret.phyclust, "phyclust")){
       stop("The ret.phyclust should be in a phyclust class.")
     }
   }

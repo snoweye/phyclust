@@ -49,7 +49,7 @@
   \item{init.procedure}{initialization procedure, default = "exhaustEM".}
   \item{init.method}{initialization method, default = "randomMu".}
   \item{substitution.model}{substitution model, default = "JC69".}
-  \item{edist.model}{evolution distance, default = "D\_J69".}
+  \item{edist.model}{evolution distance, default = \code{D_J69}.}
   \item{identifier}{identifier, default = "EE".}
   \item{code.type}{code type, default = "NUCLEOTIDE".}
   \item{em.method}{EM method, default = "EM".}

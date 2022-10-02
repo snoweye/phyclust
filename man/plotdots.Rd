@@ -30,7 +30,7 @@ plotdots(X, X.class = NULL, Mu = NULL, code.type = .code.type[1],
 }
 \details{
   The first rows in \code{Mu} will be drawn entirely on dots plots
-  in colors which are "green3", "blue2", "\#CC00CC", "red2", "gray",
+  in colors which are "green3", "blue2", \code{#CC00CC}, "red2", "gray",
   and "white", according the ids + 1. If \code{fill} is FALSE, other sequences
   will be drawn by the mutation sites comparing to the first sequences.
   Otherwise, they be drawn entirely.

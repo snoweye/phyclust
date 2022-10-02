@@ -12,15 +12,15 @@ seqgen <- function(opts = NULL, rooted.tree = NULL, newick.tree = NULL,
     }
     temp.file.ms <- tempfile("ms.")
 
-    if((! is.null(rooted.tree)) && (class(rooted.tree) == "phylo")){
+    if((!is.null(rooted.tree)) && is(rooted.tree, "phylo")){
       newick.tree <- write.tree(rooted.tree, digits = 12)
     }
     if((!is.null(newick.tree)) && (!is.null(input))){
       stop("rooted.tree/newick.tree and input can not work at the same time.")
     }
-    if(! is.null(newick.tree)){
+    if(!is.null(newick.tree)){
       write(newick.tree, file = temp.file.ms, sep = "")
-    } else if(! is.null(input)){
+    } else if(!is.null(input)){
       write(input, file = temp.file.ms, sep = "\n")
     } else{
       stop("A newick or rooted/phylo tree is required.")

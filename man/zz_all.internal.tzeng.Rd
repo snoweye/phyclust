@@ -58,7 +58,7 @@
   Tzeng, J.Y. (2005)
   \dQuote{Evolutionary-Based Grouping of Haplotypes in Association Analysis},
   \emph{Genetics Epidemiology}, \bold{28}, 220-231.
-  \url{http://www4.stat.ncsu.edu/~jytzeng/software.php}
+  \url{https://www4.stat.ncsu.edu/~jytzeng/software.php}
 }
 \author{
   Jung-Ying Tzeng
