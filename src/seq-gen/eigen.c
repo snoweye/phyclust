@@ -45,14 +45,12 @@ int cmatinv( complex x[], int n, int m, double space[]);
 //WCC int abyx (double a, double x[], int n)
 int seq_gen_abyx (double a, double x[], int n)
 //WCC { int i; for (i=0; i<n; x[i]*=a,i++) ;  return(0); }
-{ int i; for (i=0; i<n; x[i]*=a,i++)
-         ;  return(0); } // WCC: to avoid empty body warnings by clang
+{ int i; for (i=0; i<n; i++) x[i]*=a; return(0); } // WCC: to avoid empty body warnings by clang
 
 //WCC int xtoy (double x[], double y[], int n)
 int seq_gen_xtoy (double x[], double y[], int n)
 //WCC { int i; for (i=0; i<n; y[i]=x[i],i++) ;  return(0); }
-{ int i; for (i=0; i<n; y[i]=x[i],i++)
-         ;  return(0); } // WCC: to avoid empty body warnings by clang
+{ int i; for (i=0; i<n; i++) y[i]=x[i]; return(0); } // WCC: to avoid empty body warnings by clang
 
 //WCC int matinv( double x[], int n, int m, double space[])
 int seq_gen_matinv( double x[], int n, int m, double space[])
