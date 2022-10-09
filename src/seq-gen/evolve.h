@@ -73,8 +73,10 @@ enum {
 /* prototypes */
 
 void SetModel(int model);
-void SetCategories();
-void CreateRates();
+//WCC void SetCategories();
+void SetCategories(void);
+//WCC void CreateRates();
+void CreateRates(void);
 void CreateSequences(TTree *tree, int inNumSites);
 void EvolveSequences(TTree *tree, int inFromSite, int inNumSites, double scale, char *ancestor);
 

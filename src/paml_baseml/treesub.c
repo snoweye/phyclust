@@ -2165,7 +2165,8 @@ int QUNREST (FILE *fout, double Q[], double rate[], double pi[])
 double *SeqDistance=NULL; 
 int *ancestor=NULL;
 
-int SetAncestor()
+//WCC int SetAncestor()
+int SetAncestor(void)
 {
 /* This finds the most recent common ancestor of species is and js.
 */
@@ -2253,7 +2254,8 @@ double PairDistanceML(int is, int js)
 }
 
 
-int GroupDistances()
+//WCC int GroupDistances()
+int GroupDistances(void)
 {
 /* This calculates average group distances by summing over the ML 
    branch lengths */

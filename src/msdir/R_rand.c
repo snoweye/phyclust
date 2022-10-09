@@ -9,7 +9,7 @@
 	#include <stdlib.h>
 #endif
 
-double ran1(){
+double ran1(void){
 	#ifdef __HAVE_R_ 
 		return(runif(0, 1));
 	#else

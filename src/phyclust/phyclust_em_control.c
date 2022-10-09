@@ -11,7 +11,7 @@
 
 
 /* Initial a em controler. */
-em_control* initialize_em_control(){
+em_control* initialize_em_control(void){
 	em_control *EMC;
 
 	EMC = (em_control*) malloc(sizeof(em_control));

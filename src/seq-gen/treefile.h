@@ -54,7 +54,8 @@
 TTree *NewTree(int MAX_TIPS);
 void DisposeTree(TTree *tree);
 void FreeTree(TTree *tree);
-void WriteAvailInfo();
+//WCC void WriteAvailInfo();
+void WriteAvailInfo(void);
 
 int CountTrees(FILE *fv);
 void ReadTree(FILE *fv, TTree *tree, int treeNum, int numNames, char **names, 

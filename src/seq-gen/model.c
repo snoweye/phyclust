@@ -78,10 +78,13 @@ char *stateCharacters;
 
 double *freq, *addFreq;
 
-void SetupFrequencies();
-void SetupMatrices();
+//WCC void SetupFrequencies();
+void SetupFrequencies(void);
+//WCC void SetupMatrices();
+void SetupMatrices(void);
 
-void InitialiseEigen();
+//WCC void InitialiseEigen();
+void InitialiseEigen(void);
 void elmhes(double** a, int* ordr, int n);
 void mcdiv(double ar, double ai, double br, double bi);
 void hqr2(int n, int low, int hgh, double** h, double** zz, double* wr, double* wi);

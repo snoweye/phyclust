@@ -87,18 +87,26 @@ FILE *tree_fv;
 
 /* prototypes */
 
-static void PrintTitle();
-static void PrintUsage();
+//WCC static void PrintTitle();
+static void PrintTitle(void);
+//WCC static void PrintUsage();
+static void PrintUsage(void);
 static void PrintVerbose(FILE *fv);
-static void ReadParams();
-static void ReadFileParams();
-static void AllocateMemory();
-static void ReadFile();
-static int OpenTreeFile();
+//WCC static void ReadParams();
+static void ReadParams(int, char**);
+//WCC static void ReadFileParams();
+static void ReadFileParams(void);
+//WCC static void AllocateMemory();
+static void AllocateMemory(void);
+//WCC static void ReadFile();
+static void ReadFile(void);
+//WCC static int OpenTreeFile();
+static int OpenTreeFile(void);
  
 /* functions */
 
-static void PrintTitle()
+//WCC static void PrintTitle()
+static void PrintTitle(void)
 {
 /*
 	fprintf(stderr, "Sequence Generator - %s\n", PROGRAM_NAME);
@@ -163,7 +171,8 @@ static void PrintUsage()
 	fprintf(stderr, "  treefile: name of tree file [default = trees on stdin]\n\n");
 } */
 
-static void PrintUsage()
+//WCC static void PrintUsage()
+static void PrintUsage(void)
 { 
 //WCC	fprintf(stderr, "Usage: seq-gen [-m MODEL] [-l #] [-n #] [-p #] [-s # | -d #] [-k #]\n");
 //WCC	fprintf(stderr, "               [-c #1 #2 #3 | -a # [-g #]] [-f e | #] [-t # | -r #]\n");
@@ -700,7 +709,8 @@ void ReadFileParams()
 */
 
 /* Rewrite by WCC. */
-void ReadFileParams(){
+//WCC void ReadFileParams(){
+void ReadFileParams(void){
 	char ch, st[256];
 	char *i;	//WCC:add
 	
@@ -729,7 +739,8 @@ void ReadFileParams(){
 	}
 }
 
-void AllocateMemory()
+//WCC void AllocateMemory()
+void AllocateMemory(void)
 {
 	int i;
 	
@@ -804,7 +815,8 @@ void ReadFile()
 */
 
 /* Rewrite by WCC. */
-void ReadFile()
+//WCC void ReadFile()
+void ReadFile(void)
 {
 	int n, b, i;
 	char ch;
@@ -897,7 +909,8 @@ int OpenTreeFile()
 */
 
 /* Rewrite by WCC. */
-int OpenTreeFile()
+//WCC int OpenTreeFile()
+int OpenTreeFile(void)
 {
 	int n;
 

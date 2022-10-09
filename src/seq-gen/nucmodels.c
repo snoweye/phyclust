@@ -80,8 +80,10 @@ void CommonMatrix(double aa, double bbR, double bbY, double *matrix);
 void CommonVector(double aa, double bbR, double bbY, double *vector, short state);
 void CumulativeRows(double *matrix);
 
-void SetupGTR();
-void CheckNucFrequencies();
+//WCC void SetupGTR();
+void SetupGTR(void);
+//WCC void CheckNucFrequencies();
+void CheckNucFrequencies(void);
 
 /*************************************/
 void SetNucModel(int theNucModel)
@@ -393,7 +395,8 @@ void CommonVector(double aa, double bbR, double bbY, double *vector, short state
 	}
 }
 
-void SetupGTR()
+//WCC void SetupGTR()
+void SetupGTR(void)
 {
 	int i,j,k;
 	double mr;
@@ -453,7 +456,8 @@ void SetupGTR()
  * This avoids potential problems later when eigenvalues
  * are computed.
  */
-void CheckNucFrequencies()
+//WCC void CheckNucFrequencies()
+void CheckNucFrequencies(void)
 {
 	int i, j;
 	double diff;

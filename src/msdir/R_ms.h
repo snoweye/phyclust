@@ -17,7 +17,7 @@ extern FILE *R_ms_file_pointer;
 void ms_main(int argc, char *argv[]);
 
 /* In "R_rand.c". */
-double ran1();
+double ran1(void);
 
 #endif
 

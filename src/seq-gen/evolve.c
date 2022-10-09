@@ -76,7 +76,8 @@ double *siteRates;
 /* prototypes */
 
 char SetState(double *P);
-short IsInvariable();
+//WCC short IsInvariable();
+short IsInvariable(void);
 void SetSequence(char *seq, char *source, int inFromSite, int inNumSites);
 void SetNucSequence(char *seq, char *source, int inFromSite, int inNumSites);
 void SetAASequence(char *seq, char *source, int inFromSite, int inNumSites);
@@ -92,7 +93,8 @@ void WriteAncestralSequencesNode(FILE *fv, TTree *tree, int *nodeNo, TNode *des)
 
 /* functions */
 
-void CreateRates()
+//WCC void CreateRates()
+void CreateRates(void)
 {
 	int i;
 	
@@ -127,7 +129,8 @@ void CreateSequences(TTree *tree, int inNumSites)
 }
 
 
-void SetCategories()
+//WCC void SetCategories()
+void SetCategories(void)
 {
 	int i;
 	double sumRates;
@@ -169,7 +172,8 @@ char SetState(double *P)
 	return j;
 }
 
-short IsInvariable()
+//WCC short IsInvariable()
+short IsInvariable(void)
 {
 	double r;
 

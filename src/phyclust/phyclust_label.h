@@ -46,7 +46,7 @@ struct _phyclust_label{
 	double		**prob;			/* Unique labeled probability, repoint to prob_org, length = N_index. */
 };
 
-phyclust_label* initialize_phyclust_label();
+phyclust_label* initialize_phyclust_label(void);
 void free_phyclust_label(phyclust_label *pcl);
 void update_phyclust_label(phyclust_label *pcl, int label_method, int N_label, int *label_semi,
 	int *label_index, double *tmp_prob, int *map_X_org_to_X, int K);

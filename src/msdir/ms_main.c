@@ -8,7 +8,8 @@
 /* This function modified from main() in "ms.c". */
 void ms_main(int argc, char *argv[]){
 	int i, k, howmany, segsites ;
-	char **list, **cmatrix(), **tbsparamstrs ;
+//WCC	char **list, **cmatrix(), **tbsparamstrs ;
+	char **list, **cmatrix(int, int), **tbsparamstrs ;
 	double probss, tmrca, ttot ;
 
 	R_ms_file_pointer = fopen(R_ms_file_name, "a");
@@ -98,7 +99,8 @@ void free_char_2D_AP(char **char_2D_AP, int nrow){
 	free(char_2D_AP);
 } /* End of free_char_2D_AP(). */
 
-void free_pars(){
+//WCC void free_pars(){
+void free_pars(void){
 	int i;
 	
 	if(pars.cp.config != NULL){

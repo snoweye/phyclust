@@ -69,7 +69,7 @@ struct _em_control{
 	double	se_constant;			/* constanf for SE_CONSTANT probability. */
 }; /* End of struct _em_control. */
 
-em_control* initialize_em_control();
+em_control* initialize_em_control(void);
 void free_em_control(em_control *EMC);
 em_control* duplicate_em_control(em_control *org_EMC);
 void update_em_control(em_control *EMC);	/* update EMC when initial settings are changed. */

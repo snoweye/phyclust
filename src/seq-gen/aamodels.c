@@ -57,10 +57,12 @@ double aaVector[NUM_AA];
 double aaRelativeRate[NUM_AA_REL_RATES];
 static double Qij[SQNUM_AA], Cijk[CUNUM_AA], Root[NUM_AA];
 
-void SetupAAMatrix();
+//WCC void SetupAAMatrix();
+void SetupAAMatrix(void);
 void SetRelativeRates(double *inRelativeRates);
 void SetFrequencies(double *inFrequencies);
-void CheckAAFrequencies();
+//WCC void CheckAAFrequencies();
+void CheckAAFrequencies(void);
 
 /* JTT model for amino acid evolution */
 /* D.T. Jones, W.R. Taylor, and J.M. Thornton */
@@ -289,7 +291,8 @@ void SetFrequencies(double *inFrequencies)
 	}
 }
 
-void SetupAAMatrix()
+//WCC void SetupAAMatrix()
+void SetupAAMatrix(void)
 {
 	int i,j,k;
 	double mr;
@@ -347,7 +350,8 @@ void SetupAAMatrix()
  * This avoids potential problems later when eigenvalues
  * are computed.
  */
-void CheckAAFrequencies()
+//WCC void CheckAAFrequencies()
+void CheckAAFrequencies(void)
 {
 	int i, j;
 	double diff;

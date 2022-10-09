@@ -192,7 +192,8 @@ double genrand_res53(void)
 //WCC 	init_genrand(seed);
 //WCC }
 
-unsigned long CreateSeed( )
+//WCC unsigned long CreateSeed( )
+unsigned long CreateSeed(void)
 {
 	static unsigned long differ = 0;  // guarantee time-based seeds will change
 
@@ -234,7 +235,8 @@ unsigned long CreateSeed( )
 #else
 	#include <stdlib.h>
 #endif
-double seq_gen_rndu(){
+//WCC double seq_gen_rndu(){
+double seq_gen_rndu(void){
 	#ifdef __HAVE_R_ 
 		return(runif(0, 1));	/* Generate a uniform(0, 1). */
 	#else

@@ -251,7 +251,8 @@ void FreeTree(TTree *tree)
 
 
 /*----------*/
-void WriteAvailInfo()
+//WCC void WriteAvailInfo()
+void WriteAvailInfo(void)
 {
 	TNode *P;
 	int count;

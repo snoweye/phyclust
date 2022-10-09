@@ -798,8 +798,9 @@ exit(1);
 } */
 
 //WCC	int
+//WCC usage()
 	void
-usage()
+usage(void)
 {
 printf("usage: ms nsam howmany \n");
 printf("  Options: \n"); 
@@ -986,7 +987,8 @@ pickb(nsam, ptree, tt)
 	struct node *ptree;
 	double tt;
 {
-	double x, y, ran1();
+//WCC	double x, y, ran1();
+	double x, y, ran1(void);
 	int i;
 
 	x = ran1()*tt;
@@ -1003,7 +1005,8 @@ pickbmf(nsam, mfreq, ptree, tt )
 	struct node *ptree;
 	double tt;
 {
-	double x, y, ran1();
+//WCC	double x, y, ran1();
+	double x, y, ran1(void);
 	int i;
 
 	x = ran1()*tt;
@@ -1063,7 +1066,8 @@ mnmial(n,nclass,p,rv)
 	int n, nclass, rv[];
 	double p[];
 {
-	double ran1();
+//WCC	double ran1();
+	double ran1(void);
 	double x, s;
 //WCC	int i, j;
 	int i, j = 0;
@@ -1105,7 +1109,8 @@ ranvec(n,pbuf)
 	double pbuf[];
 {
 	int i;
-	double ran1();
+//WCC	double ran1();
+	double ran1(void);
 
 	for(i=0; i<n; i++)
 		pbuf[i] = ran1();
@@ -1119,7 +1124,8 @@ ranvec(n,pbuf)
 poisso(u)
 	double u;
 {
-	double  cump, ru, ran1(), p, gasdev() ;
+//WCC	double  cump, ru, ran1(), p, gasdev() ;
+	double  cump, ru, ran1(void), p, gasdev(double, double) ;
 	int i=1;
 
 	if( u > 30. ) return( (int)(0.5 + gasdev(u,u)) );
@@ -1142,7 +1148,8 @@ double gasdev(m,v)
 //WCC	static int iset=0;
 	static float gset;
 	float fac,r,v1,v2;
-	double ran1();
+//WCC	double ran1();
+	double ran1(void);
 
 //WCC	if  (iset == 0) {
 		do {

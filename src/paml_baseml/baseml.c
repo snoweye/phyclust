@@ -49,7 +49,8 @@ void DatingHeteroData(FILE* fout);
 int TestModel (FILE *fout, double x[], int nsep, double space[]);
 int OldDistributions (int inode, double oldfreq[]);
 int SubData(int argc, char *argv[]);
-int GroupDistances();
+//WCC int GroupDistances();
+int GroupDistances(void);
 
 
 struct CommonInfo {

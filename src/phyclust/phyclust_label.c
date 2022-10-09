@@ -9,7 +9,7 @@
 
 
 /* Initial a phyclust label. */
-phyclust_label* initialize_phyclust_label(){
+phyclust_label* initialize_phyclust_label(void){
 	phyclust_label *pcl;
 
 	pcl = (phyclust_label*) malloc(sizeof(phyclust_label));
