@@ -1329,7 +1329,8 @@ void SetSeed (int seed, int PrintSeed)
 #else
 	#include <stdlib.h>
 #endif
-double rndu(){
+//WCC double rndu(){
+double rndu(void){
 	#ifdef __HAVE_R_ 
 		return(runif(0, 1));	/* Generate a uniform(0, 1). */
 	#else

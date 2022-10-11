@@ -3,6 +3,8 @@
   * Fix \_ and \# warnings caught by checkRd.
   * Change "http" to "https" in some Rd files.
   * Use "is()" to replace "class()" inside the "if()" in some R code.
+  * Fix stric-prototypes warnings by adding "void" to functions
+    without arguments.
 
 2021-02-09: Ver. 0.1-30
   * Change http to https.
