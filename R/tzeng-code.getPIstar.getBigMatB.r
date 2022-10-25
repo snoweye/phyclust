@@ -209,7 +209,8 @@ get.medBB.skip.fun<-function(subPI.lst, preBB.lst, indexBB.lst, loci, digit, mml
                       poolPI<-mmle.cscn[match(names(subPI.lst[[rr-tt]]), names(mmle.cscn))]
                       if(length(poolPI)>1)
                         {
-                          tmp<-(theta^(mut.step-tt))%*% diag(poolPI)
+                          tmp.mut.step <- as.matrix(mut.step)
+                          tmp<-(theta^(tmp.mut.step-tt))%*% diag(poolPI)
                         }else{
                           tmp<-(theta^(mut.step-tt))  *      poolPI
                         }
