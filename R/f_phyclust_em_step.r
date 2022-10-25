@@ -19,7 +19,7 @@ phyclust.em.step <- function(X, ret.phyclust = NULL,
                            code.type = code.type)
     }
   } else{
-    if(!is(ret.phyclust, "phyclust")){
+    if(!inherits(ret.phyclust, "phyclust")){
       stop("The ret.phyclust should be in a phyclust class.")
     }
   }
@@ -74,7 +74,7 @@ phyclust.e.step <- function(X, ret.phyclust = NULL,
                            code.type = code.type)
     }
   } else{
-    if(!is(ret.phyclust, "phyclust")){
+    if(!inherits(ret.phyclust, "phyclust")){
       stop("The ret.phyclust should be in a phyclust class.")
     }
   }
@@ -122,7 +122,7 @@ phyclust.m.step <- function(X, ret.phyclust = NULL,
                            code.type = code.type)
     }
   } else{
-    if(!is(ret.phyclust, "phyclust")){
+    if(!inherits(ret.phyclust, "phyclust")){
       stop("The ret.phyclust should be in a phyclust class.")
     }
   }

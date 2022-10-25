@@ -5,7 +5,7 @@ Title: Phylogenetic Clustering (Phyloclustering)
 Authors@R: c(person("Wei-Chen", "Chen", role = c("aut", "cre"), email =
         "wccsnow@gmail.com"), person("Karin", "Dorman", role =
         "aut"), person("Yan-Han", "Chen", role = "ctb"))
-Depends: R (>= 3.0.0), ape, methods
+Depends: R (>= 3.0.0), ape
 LazyLoad: yes
 LazyData: yes
 Copyright: See phyclust/inst/Documents/ for files in src/msdir/,

@@ -64,7 +64,7 @@ find.best <- function(X, K, EMC = .EMC, manual.id = NULL, byrow = TRUE,
       }
 
       if(save.all){
-        if(is(new.ret, "try-error")){
+        if(inherits(new.ret, "try-error")){
           new.ret$init.procedure <- init.proc
           new.ret$init.method <- init.meth
         }
@@ -76,7 +76,7 @@ find.best <- function(X, K, EMC = .EMC, manual.id = NULL, byrow = TRUE,
         count.all <- count.all + 1
       }
 
-      if(!is(new.ret, "try-error")){
+      if(!inherits(new.ret, "try-error")){
         if(is.finite(new.ret$logL) && new.ret$logL > org.logL){
           org.logL <- new.ret$logL
           ret <- new.ret

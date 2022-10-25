@@ -12,7 +12,7 @@ seqgen <- function(opts = NULL, rooted.tree = NULL, newick.tree = NULL,
     }
     temp.file.ms <- tempfile("ms.")
 
-    if((!is.null(rooted.tree)) && is(rooted.tree, "phylo")){
+    if((!is.null(rooted.tree)) && inherits(rooted.tree, "phylo")){
       newick.tree <- write.tree(rooted.tree, digits = 12)
     }
     if((!is.null(newick.tree)) && (!is.null(input))){

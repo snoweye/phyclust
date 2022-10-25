@@ -1,6 +1,6 @@
 useDynLib(phyclust)
 
-import(ape, methods)
+import(ape)
 
 importFrom("graphics", "abline", "axis", "barplot", "lines", "par",
            "plot", "rect")

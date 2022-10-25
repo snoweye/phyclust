@@ -58,7 +58,7 @@ paml.baseml <- function(X, seqname = NULL, opts = NULL, newick.trees = NULL){
 
   ### Read in output.
   ret <- NULL
-  if(is(tmp, "try-error")){
+  if(inherits(tmp, "try-error")){
     ret$error.baseml <- tmp
   }
   output.file.names <- list.files(temp.dir)
@@ -73,7 +73,7 @@ paml.baseml <- function(X, seqname = NULL, opts = NULL, newick.trees = NULL){
 
   ### Find the best tree.
   tmp <- try(read.tree(text = ret$mlb[length(ret$mlb)]), silent = TRUE)
-  if(is(tmp, "try-error")){
+  if(inherits(tmp, "try-error")){
     ret$error.tree <- tmp
   } else{
     id <- length(ret$mlb)
