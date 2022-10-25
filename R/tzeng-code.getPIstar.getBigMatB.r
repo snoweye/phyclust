@@ -139,8 +139,11 @@ get.preBB.skip.fun<-function(subPI.lst, loci, digit, mmle.cscn){
             ## changed on 03/10/2005, should use mmle.cscn instead of pcs or pcn to construct matB
             poolPI<-mmle.cscn[match(names(subPI.lst[[rr-ss]]), names(mmle.cscn))]
             if(length(poolPI)>1){
-                tmp <-(theta^(mut.step-ss))%*% diag(poolPI) }else{
-                tmp <-(theta^(mut.step-ss)) *       poolPI  }
+                tmp.mut.step <- as.matrix(mut.step)
+                tmp <-(theta^(tmp.mut.step-ss))%*% diag(poolPI)
+            }else{
+                tmp <-(theta^(mut.step-ss)) *       poolPI
+            }
             preBB.lst[[rr]]<- tmp/    apply(tmp, 1,sum)
             dimnames(preBB.lst[[rr]])<-dimnames(mut.step)
           }

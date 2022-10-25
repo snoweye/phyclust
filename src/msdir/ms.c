@@ -353,9 +353,9 @@ ndes_setup(struct node *ptree, int nsam )
 
 //WCC	int
 	void
-biggerlist(nsam,  list )
-	int nsam ;
-	char ** list ;
+biggerlist(int nsam,  char **list )
+//WCC	int nsam ;
+//WCC	char ** list ;
 {
 	int i;
 
@@ -370,8 +370,8 @@ biggerlist(nsam,  list )
 
 /* allocates space for gametes (character strings) */
 	char **
-cmatrix(nsam,len)
-	int nsam, len;
+cmatrix(int nsam, int len)
+//WCC	int nsam, len;
 {
 	int i;
 	char **m;
@@ -389,9 +389,9 @@ cmatrix(nsam,len)
 
 //WCC	int
 	void
-locate(n,beg,len,ptr)
-	int n;
-	double beg, len, *ptr;
+locate(int n, double beg, double len, double *ptr)
+//WCC	int n;
+//WCC	double beg, len, *ptr;
 {
 	int i;
 
@@ -900,9 +900,9 @@ make_gametes(int nsam, int mfreq, struct node *ptree, double tt, int newsites, i
 /***  ttime.c : Returns the total time in the tree, *ptree, with nsam tips. **/
 
 	double
-ttime( ptree, nsam)
-	struct node *ptree;
-	int nsam;
+ttime(struct node *ptree, int nsam)
+//WCC	struct node *ptree;
+//WCC	int nsam;
 {
 	double t;
 	int i;
@@ -915,9 +915,9 @@ ttime( ptree, nsam)
 
 
 	double
-ttimemf( ptree, nsam, mfreq)
-	struct node *ptree;
-	int nsam, mfreq;
+ttimemf(struct node *ptree, int nsam, int mfreq)
+//WCC	struct node *ptree;
+//WCC	int nsam, mfreq;
 {
 	double t;
 	int i;
@@ -931,9 +931,9 @@ ttimemf( ptree, nsam, mfreq)
 
 
 	void
-prtree( ptree, nsam)
-	struct node *ptree;
-	int nsam;
+prtree(struct node *ptree, int nsam)
+//WCC	struct node *ptree;
+//WCC	int nsam;
 {
 //WCC	double t;
 	int i, *descl, *descr ;
@@ -982,10 +982,10 @@ parens( struct node *ptree, int *descl, int *descr,  int noden)
 	      time in tree.   ****/
 
 	int
-pickb(nsam, ptree, tt)
-	int nsam;
-	struct node *ptree;
-	double tt;
+pickb(int nsam, struct node *ptree, double tt)
+//WCC	int nsam;
+//WCC	struct node *ptree;
+//WCC	double tt;
 {
 //WCC	double x, y, ran1();
 	double x, y, ran1(void);
@@ -1000,10 +1000,10 @@ pickb(nsam, ptree, tt)
 }
 
 	int
-pickbmf(nsam, mfreq, ptree, tt )
-	int nsam, mfreq;
-	struct node *ptree;
-	double tt;
+pickbmf(int nsam, int mfreq, struct node *ptree, double tt )
+//WCC	int nsam, mfreq;
+//WCC	struct node *ptree;
+//WCC	double tt;
 {
 //WCC	double x, y, ran1();
 	double x, y, ran1(void);
@@ -1021,9 +1021,9 @@ pickbmf(nsam, mfreq, ptree, tt )
 /****  tdesn : returns 1 if tip is a descendant of node in *ptree, otherwise 0. **/
 
 	int
-tdesn(ptree, tip, node )
-	struct node *ptree;
-	int tip, node;
+tdesn(struct node *ptree, int tip, int node )
+//WCC	struct node *ptree;
+//WCC	int tip, node;
 {
 	int k;
 
@@ -1036,8 +1036,8 @@ tdesn(ptree, tip, node )
 /* pick2()  */
 
 	int
-pick2(n,i,j)
-	int n, *i, *j;
+pick2(int n, int *i, int *j)
+//WCC	int n, *i, *j;
 {
 //WCC	double ran1();
 
@@ -1051,9 +1051,9 @@ pick2(n,i,j)
 
 //WCC	int
 	void
-ordran(n,pbuf)
-	int n;
-	double pbuf[];
+ordran(int n, double pbuf[])
+//WCC	int n;
+//WCC	double pbuf[];
 {
 	ranvec(n,pbuf);
 	order(n,pbuf);
@@ -1062,9 +1062,9 @@ ordran(n,pbuf)
 
 
 	int
-mnmial(n,nclass,p,rv)
-	int n, nclass, rv[];
-	double p[];
+mnmial(int n, int nclass, double p[], int rv[])
+//WCC	int n, nclass, rv[];
+//WCC	double p[];
 {
 //WCC	double ran1();
 	double ran1(void);
@@ -1085,9 +1085,9 @@ mnmial(n,nclass,p,rv)
 
 //WCC        int
 	void
-order(n,pbuf)
-        int n;
-        double pbuf[];
+order(int n, double pbuf[])
+//WCC        int n;
+//WCC        double pbuf[];
 {
         int gap, i, j;
         double temp;
@@ -1104,9 +1104,9 @@ order(n,pbuf)
 
 //WCC	int
 	void
-ranvec(n,pbuf)
-	int n;
-	double pbuf[];
+ranvec(int n, double pbuf[])
+//WCC	int n;
+//WCC	double pbuf[];
 {
 	int i;
 //WCC	double ran1();
@@ -1121,8 +1121,8 @@ ranvec(n,pbuf)
 
 
 	int
-poisso(u)
-	double u;
+poisso(double u)
+//WCC	double u;
 {
 //WCC	double  cump, ru, ran1(), p, gasdev() ;
 	double  cump, ru, ran1(void), p, gasdev(double, double) ;
@@ -1142,8 +1142,8 @@ poisso(u)
 
 /* a slight modification of crecipes version */
 
-double gasdev(m,v)
-	double m, v;
+double gasdev(double m, double v)
+//WCC	double m, v;
 {
 //WCC	static int iset=0;
 	static float gset;

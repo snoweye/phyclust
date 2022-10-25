@@ -436,8 +436,8 @@ segtre_mig(struct c_params *cp, int *pnsegs )
 
 
 	int
-re(nsam)
-	int nsam;
+re(int nsam)
+//WCC	int nsam;
 {
 //WCC	struct seg *pseg ;
 	struct seg *pseg = NULL;
@@ -626,9 +626,9 @@ if( !(chrom[ic].pseg =
    Pick two chromosomes and merge them. Update trees if necessary. **/
 
 	int
-ca(nsam, nsites,c1,c2)
-	int nsam,c1,c2;
-	int  nsites;
+ca(int nsam, int nsites, int c1, int c2)
+//WCC	int nsam,c1,c2;
+//WCC	int  nsites;
 {
 	int yes1, yes2, seg1, seg2, seg ;
 	int tseg, start, end, desc, k;
@@ -708,8 +708,8 @@ ca(nsam, nsites,c1,c2)
 	    looking.  **/
 
 	int
-isseg(start, c, psg)
-	int start, c, *psg;
+isseg(int start, int c, int *psg)
+//WCC	int start, c, *psg;
 {
 	int ns;
 	struct seg *pseg;
@@ -727,8 +727,8 @@ isseg(start, c, psg)
 
 //WCC	int
 	void
-pick2_chrom(pop,config,pc1,pc2)
-	int pop, *pc1, *pc2, config[];
+pick2_chrom(int pop, int config[], int *pc1, int *pc2)
+//WCC	int pop, *pc1, *pc2, config[];
 {
 	int c1, c2, cs,cb,i, count;
 	
@@ -759,8 +759,8 @@ pick2_chrom(pop,config,pc1,pc2)
 /****  links(c): returns the number of links between beginning and end of chrom **/
 
 	int
-links(c)
-	int c;
+links(int c)
+//WCC	int c;
 {
 	int ns;
 

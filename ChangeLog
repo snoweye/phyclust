@@ -3,8 +3,11 @@
   * Fix \_ and \# warnings caught by checkRd.
   * Change "http" to "https" in some Rd files.
   * Use "is()" to replace "class()" inside the "if()" in some R code.
-  * Fix stric-prototypes warnings by adding "void" to functions
+  * Fix "stric-prototypes" warnings by adding "void" to functions
     without arguments.
+  * Fix "deprecated-non-prototype" warnings.
+  * Fix "(theta^(mut.step - ss)) %*% diag(poolPI)" error in the
+    haplo.post.prob() function.
 
 2021-02-09: Ver. 0.1-30
   * Change http to https.
