@@ -1,7 +1,7 @@
 citHeader("To cite phyclust in a publication use:")
 
 bibentry(
-  entry = "Manual",
+  bibtype = "Manual",
   title = "Overlapping Codon Model, Phylogenetic Clustering, and Alternative
            Partial Expectation Conditional Maximization Algorithm",
   author = c("Wei-Chen Chen"),
