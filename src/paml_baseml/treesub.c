@@ -864,7 +864,10 @@ void AllPatterns (FILE* fout)
 //WCC      com.spname[j] = (char*)realloc(com.spname[j], 11*sizeof(char));
       com.spname[j] = (unsigned char*)realloc(com.spname[j], 11*sizeof(char));
 //WCC      sprintf(com.spname[j], "%c ", 'a'+j);
-      sprintf((char*) com.spname[j], "%c ", 'a'+j);
+
+      /* R-devel on around Dec. 24, 2022 starting to warn the line below. */
+      // sprintf((char*) com.spname[j], "%c ", 'a'+j);
+      snprintf((char*) com.spname[j], LSPNAME+1, "%c ", 'a'+j);
    }
    for(j=0; j<com.ns; j++) 
 //WCC      if((com.z[j]=(char*) malloc(com.npatt*sizeof(char))) == NULL)
@@ -4417,7 +4420,9 @@ void printSeqsMgenes (void)
       for (h=0,lg=0; h<com.ls; h++)
          if(com.pose[h]==ig)
             lg++;
-      sprintf(seqf, "Gene%d.seq", ig+1);
+      /* R-devel on around Dec. 24, 2022 starting to warn the line below. */
+      // sprintf(seqf, "Gene%d.seq", ig+1);
+      snprintf(seqf, 20, "Gene%d.seq", ig+1);
       if((fseq=fopen(seqf,"w"))==NULL) error2("file creation err.");
 //WCC      printf("%d sites in gene %d go to file %s\n", lg, ig+1,seqf);
       fprintf(R_paml_baseml_file_pointer, "%d sites in gene %d go to file %s\n", lg, ig+1,seqf);

@@ -141,7 +141,11 @@ int ListTrees (FILE* fout, int ns, int rooted)
    if(com.ns<=26) {
       for (i=0; i<com.ns; i++)
 //WCC         sprintf(com.spname[i], "%d", i+1);
-         sprintf((char*) com.spname[i], "%d", i+1);
+
+         /* R-devel on around Dec. 24, 2022 starting to warn the line below. */
+         // sprintf((char*) com.spname[i], "%d", i+1);
+         /* See "treesub.c" where the space was allocated (around line 196). */
+         snprintf((char*) com.spname[i], LSPNAME+1, "%d", i+1);
    }
 
    for (i=0;i<nM;i++) Ib[i]=0;
