@@ -257,7 +257,9 @@ int optim_nmmin(int n, double *Bvec, double *X, double *Fmin,
 
 	    if (VH <= VL + convtol || VL <= abstol) break;
 
-	    sprintf(tstr, "%5d", funcount);
+	    /* R-devel on around Dec. 24, 2022 starting to warn the line below. */
+	    // sprintf(tstr, "%5d", funcount);
+	    snprintf(tstr, 16, "%5d", funcount);
 	    if (trace) printf("%s%s %f %f\n", action, tstr, VH, VL);
 
 	    for (i = 0; i < n; i++) {

@@ -308,7 +308,9 @@ void ReadUntil(FILE *fv, char stopChar, char *what)
 		ch=fgetc(fv);
 
 	if (feof(fv) || ch!=stopChar) {
-		sprintf(treeErrorMsg, "%s missing", what);
+		/* R-devel on around Dec. 24, 2022 starting to warn the line below. */
+		// sprintf(treeErrorMsg, "%s missing", what);
+		snprintf(treeErrorMsg, 256, "%s missing", what);
 		treeError=1;
 	}
 }
@@ -353,7 +355,9 @@ TNode *ReadTip(FILE *fv, char ch, TTree *tree, int numNames, char **names)
 			i++;
 
 		if (i == numNames) {
-			sprintf(treeErrorMsg, "Taxon names in trees for different partitions do not match.");
+			/* R-devel on around Dec. 24, 2022 starting to warn the line below. */
+			// sprintf(treeErrorMsg, "Taxon names in trees for different partitions do not match.");
+			snprintf(treeErrorMsg, 256, "Taxon names in trees for different partitions do not match.");
 			return NULL;
 		}
 		
@@ -367,7 +371,9 @@ TNode *ReadTip(FILE *fv, char ch, TTree *tree, int numNames, char **names)
 		ch=fgetc(fv);
 
 	if (feof(fv)) {
-		sprintf(treeErrorMsg, "Unexpected end of file");
+		/* R-devel on around Dec. 24, 2022 starting to warn the line below. */
+		// sprintf(treeErrorMsg, "Unexpected end of file");
+		snprintf(treeErrorMsg, 256, "Unexpected end of file");
 		return NULL;
 	}
 	ungetc(ch, fv);
@@ -416,7 +422,9 @@ TNode *ReadNode(FILE *fv, TTree *tree, int numNames, char **names, int detectPol
 	}
 
 	if (feof(fv)) {
-		sprintf(treeErrorMsg, "Unexpected end of file");
+		/* R-devel on around Dec. 24, 2022 starting to warn the line below. */
+		// sprintf(treeErrorMsg, "Unexpected end of file");
+		snprintf(treeErrorMsg, 256, "Unexpected end of file");
 		return NULL;
 	}
 	ungetc(ch, fv);
@@ -444,20 +452,26 @@ TNode *ReadBranch(FILE *fv, TTree *tree, int numNames, char **names)
 	ch=ReadToNextChar(fv);
 	if (ch==':') {
 		if (tree->lengths==0) {
-			sprintf(treeErrorMsg, "Some branches don't have branch lengths");
+			/* R-devel on around Dec. 24, 2022 starting to warn the line below. */
+			// sprintf(treeErrorMsg, "Some branches don't have branch lengths");
+			snprintf(treeErrorMsg, 256, "Some branches don't have branch lengths");
 			return NULL;
 		} else 
 			tree->lengths=1;
 			
 		if (fscanf(fv, "%lf", &len)!=1) {
-			sprintf(treeErrorMsg, "Unable to read branch length");
+			/* R-devel on around Dec. 24, 2022 starting to warn the line below. */
+			// sprintf(treeErrorMsg, "Unable to read branch length");
+			snprintf(treeErrorMsg, 256, "Unable to read branch length");
 			return NULL;
 		}
 
 		ch=ReadToNextChar(fv);
 		if (ch=='[') {
 			if (fscanf(fv, "%lf", &param)!=1) {
-				sprintf(treeErrorMsg, "Unable to read branch parameter");
+				/* R-devel on around Dec. 24, 2022 starting to warn the line below. */
+				// sprintf(treeErrorMsg, "Unable to read branch parameter");
+				snprintf(treeErrorMsg, 256, "Unable to read branch parameter");
 				return NULL;
 			}
 			ReadUntil(fv, ']', "Close square bracket");
@@ -465,7 +479,9 @@ TNode *ReadBranch(FILE *fv, TTree *tree, int numNames, char **names)
 			ungetc(ch, fv);
 	} else {
 		if (tree->lengths==1) {
-			sprintf(treeErrorMsg, "Some branches don't have branch lengths");
+			/* R-devel on around Dec. 24, 2022 starting to warn the line below. */
+			// sprintf(treeErrorMsg, "Some branches don't have branch lengths");
+			snprintf(treeErrorMsg, 256, "Some branches don't have branch lengths");
 			return NULL;
 		} else 
 			tree->lengths=0;
@@ -500,7 +516,9 @@ void ReadTree(FILE *fv, TTree *tree, int treeNum, int numNames, char **names,
 
 	if (ch == '[') {
 		if (fscanf(fv, "%d", outNumSites)!=1) {
-			sprintf(treeErrorMsg, "Unable to read partition length");
+			/* R-devel on around Dec. 24, 2022 starting to warn the line below. */
+			// sprintf(treeErrorMsg, "Unable to read partition length");
+			snprintf(treeErrorMsg, 256, "Unable to read partition length");
 			exit(0);
 		}
 
@@ -510,7 +528,9 @@ void ReadTree(FILE *fv, TTree *tree, int treeNum, int numNames, char **names,
 			
 		if (ch == ',') {
 			if (fscanf(fv, "%lf", outRelRate)!=1) {
-				sprintf(treeErrorMsg, "Unable to read partition relative rate");
+				/* R-devel on around Dec. 24, 2022 starting to warn the line below. */
+				// sprintf(treeErrorMsg, "Unable to read partition relative rate");
+				snprintf(treeErrorMsg, 256, "Unable to read partition relative rate");
 				exit(0);
 			}
 

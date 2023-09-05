@@ -1078,8 +1078,12 @@ char* printtime (char timestr[])
    h = (int)t/3600;
    m = (int)(t%3600)/60;
    s = (int)(t-(t/60)*60);
-   if(h)  sprintf(timestr,"%d:%02d:%02d", h,m,s);
-   else   sprintf(timestr,"%2d:%02d", m,s);
+
+   /* R-devel on around Dec. 24, 2022 starting to warn the line below. */
+   // if(h)  sprintf(timestr,"%d:%02d:%02d", h,m,s);
+   // else   sprintf(timestr,"%2d:%02d", m,s);
+   if(h)  snprintf(timestr,32,"%d:%02d:%02d", h,m,s);
+   else   snprintf(timestr,32,"%2d:%02d", m,s);
    return(timestr);
 }
 

@@ -42,7 +42,7 @@ double seq_gen_rndgamma (double s)
 		r = rndgamma2 (s);
 	else           
 //WCC		r =- log(rndu());
-		r =- log(seq_gen_rndu());
+		r = r - log(seq_gen_rndu());
 	return (r);
 }
 
