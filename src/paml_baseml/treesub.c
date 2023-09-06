@@ -867,7 +867,7 @@ void AllPatterns (FILE* fout)
 
       /* R-devel on around Dec. 24, 2022 starting to warn the line below. */
       // sprintf((char*) com.spname[j], "%c ", 'a'+j);
-      snprintf((char*) com.spname[j], LSPNAME+1, "%c ", 'a'+j);
+      snprintf((char*) com.spname[j], 11, "%c ", 'a'+j);
    }
    for(j=0; j<com.ns; j++) 
 //WCC      if((com.z[j]=(char*) malloc(com.npatt*sizeof(char))) == NULL)
